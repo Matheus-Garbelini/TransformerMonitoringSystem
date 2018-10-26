@@ -1,0 +1,1654 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\_micro-api">
+      <UniqueIdentifier>{c5af28e9-ca65-4eff-8507-a2bc2a07bd3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries">
+      <UniqueIdentifier>{887dcf28-eeb4-415d-88d7-2dee668c0316}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\arduino-LoRa-master">
+      <UniqueIdentifier>{3ff212bb-8878-4d4e-b00f-59a59cae1419}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\arduino-LoRa-master\src">
+      <UniqueIdentifier>{bc6b261b-1405-468f-9e2f-6c5637f5a829}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\ArduinoJson">
+      <UniqueIdentifier>{38916e8d-4d23-48e2-b61f-e77c334fa542}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\ArduinoJson\fuzzing">
+      <UniqueIdentifier>{fbdab783-d183-4086-8abe-a25bed9187ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\ArduinoJson\src">
+      <UniqueIdentifier>{4e60a623-0a4d-42d2-ae8c-b52f98c949bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson">
+      <UniqueIdentifier>{10c404be-eaf1-4445-bfa4-424aad65ca5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Data">
+      <UniqueIdentifier>{6487508a-1448-449d-9650-cfa5362cde3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Deserialization">
+      <UniqueIdentifier>{2f0fad5e-c00e-4751-9fa7-548ebe2c92ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Polyfills">
+      <UniqueIdentifier>{b505cb48-e060-49bd-b5b0-6c21c56a422d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Serialization">
+      <UniqueIdentifier>{7c7f5f7e-be72-4d79-9444-63f0130673be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\StringTraits">
+      <UniqueIdentifier>{8e93453d-dbb8-420e-a734-dcb0e887b952}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\TypeTraits">
+      <UniqueIdentifier>{de98bcd7-fbf6-4709-8ad0-f60e5d5d4682}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\ArduinoJson\test">
+      <UniqueIdentifier>{b7449db5-d6fc-4d16-b8ae-a3e8f92fcd5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\ArduinoJson\test\DynamicJsonBuffer">
+      <UniqueIdentifier>{baa48c7e-809d-46ea-8cf2-d21c7216323a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\ArduinoJson\test\IntegrationTests">
+      <UniqueIdentifier>{2df8f3df-2f4c-489a-a15b-ebd62f19867c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\ArduinoJson\test\JsonArray">
+      <UniqueIdentifier>{53f73022-f352-4bbe-9e7c-2f66660f3c1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\ArduinoJson\test\JsonBuffer">
+      <UniqueIdentifier>{ce7f6fa1-fa9a-4a43-9fde-11bc2d04bffc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\ArduinoJson\test\JsonObject">
+      <UniqueIdentifier>{671346db-023b-469c-9ce3-e293f2e1e6fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\ArduinoJson\test\JsonVariant">
+      <UniqueIdentifier>{a9113041-6123-4345-b040-2bf66dc8e68b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\ArduinoJson\test\JsonWriter">
+      <UniqueIdentifier>{d7b1bcc8-4f17-46ef-8f88-f293d8892639}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\ArduinoJson\test\Misc">
+      <UniqueIdentifier>{67d7f711-b842-4198-b56e-af427306643e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\ArduinoJson\test\Polyfills">
+      <UniqueIdentifier>{b676f8a6-c9ab-4ca1-8354-51015a8dc338}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\ArduinoJson\test\StaticJsonBuffer">
+      <UniqueIdentifier>{8825e520-4b28-4dc9-b06f-9ee70cfd718e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\ArduinoJson\third-party">
+      <UniqueIdentifier>{6c99195d-9aa3-48eb-8228-96f85a85a96b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\ArduinoJson\third-party\catch">
+      <UniqueIdentifier>{92e80592-2833-4480-967a-0fc4f4541fcd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\espsoftwareserial-master">
+      <UniqueIdentifier>{8f77e993-30c6-4787-8349-268379af3ef8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\Modbus">
+      <UniqueIdentifier>{adcb61db-2d68-4bbb-b851-925f04044c32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\ModbusSerial">
+      <UniqueIdentifier>{a9ca5eee-601b-4737-81c7-9a98c912bc4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\nextion">
+      <UniqueIdentifier>{541ad31e-7862-4a3b-b8ca-8f934ef7f3a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\nextion\doc">
+      <UniqueIdentifier>{dae87f4c-c0e5-411d-a9cb-644e2bfa743e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\nextion\doc\Documentation">
+      <UniqueIdentifier>{61bcc01f-6e1f-49aa-bed0-fb3a7db6dfd4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\nextion\doc\Documentation\latex">
+      <UniqueIdentifier>{7112c772-1cf5-4ab1-8cfc-daeaa3da02c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\nextion\doc\latex">
+      <UniqueIdentifier>{e11969db-828a-49e2-90a4-54f6ea9cc19e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\nextion\latex">
+      <UniqueIdentifier>{f0dc9ed2-f262-4e6d-b9b9-dd4abef2562c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON">
+      <UniqueIdentifier>{b126b73d-16d9-425b-9967-e9be36267bdb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples">
+      <UniqueIdentifier>{7cedf8ba-2415-46d2-86aa-27ddd6e15527}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\LINUX">
+      <UniqueIdentifier>{1d833af2-f532-460d-bf34-e7c49c554b9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\LINUX\Local">
+      <UniqueIdentifier>{4e1d4e21-f9fc-4b80-9e8d-2a99af96efb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\LINUX\Local\EthernetTCP">
+      <UniqueIdentifier>{a70bfc02-69e9-48c2-94ef-de022d9973e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\LINUX\Local\EthernetTCP\PingPong">
+      <UniqueIdentifier>{3d09669d-0d34-4e51-a7e4-c4ed2a31f66f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\LINUX\Local\EthernetTCP\PingPong\Receiver">
+      <UniqueIdentifier>{4e9a3369-78e2-4e18-aa32-e76034330a3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\LINUX\Local\EthernetTCP\PingPong\Transmitter">
+      <UniqueIdentifier>{0dcbecec-5838-4194-a593-af85a1c548a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\LINUX\Local\EthernetTCP\RemoteWorker">
+      <UniqueIdentifier>{b34c1050-373b-4a0f-91b7-2088829602ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\LINUX\Local\EthernetTCP\RemoteWorker\Transmitter">
+      <UniqueIdentifier>{f973d3d9-b069-419a-9f11-0db37d1c309f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\LINUX\Local\GlobalUDP">
+      <UniqueIdentifier>{86b42f72-1671-48d7-8695-bc2ec0568181}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\LINUX\Local\GlobalUDP\PingPong">
+      <UniqueIdentifier>{93abbb8e-f9ff-496b-9d65-3efc6716abfd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\LINUX\Local\GlobalUDP\PingPong\Receiver">
+      <UniqueIdentifier>{b068700a-06bb-4805-bf55-d56e2875f7de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\LINUX\Local\GlobalUDP\PingPong\Transmitter">
+      <UniqueIdentifier>{7f0b4326-c6f5-4200-a165-d2e3d4b32325}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\LINUX\Local\LocalUDP">
+      <UniqueIdentifier>{240b1fcb-9685-4476-88e2-8dc84ec017d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\LINUX\Local\LocalUDP\PingPong">
+      <UniqueIdentifier>{110cbe78-0074-4225-bcbe-0480930bf777}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\LINUX\Local\LocalUDP\PingPong\Receiver">
+      <UniqueIdentifier>{42e0bfa4-61f4-4971-8062-242a3c4246d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\LINUX\Local\LocalUDP\PingPong\Transmitter">
+      <UniqueIdentifier>{4b8d9427-758a-448c-9bca-354637c5162d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\RPI">
+      <UniqueIdentifier>{b1007db1-638d-4d97-bb44-8b83decf8530}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\RPI\Local">
+      <UniqueIdentifier>{af1457d5-6fdd-4ac4-bc7f-141cbd6f144e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\RPI\Local\ThroughSerial">
+      <UniqueIdentifier>{ec752450-e4fe-4bef-b9ce-69d68895351f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\RPI\Local\ThroughSerial\BlinkTestReceiver">
+      <UniqueIdentifier>{f2b8ed4f-008c-42ac-8523-3174ab9fa7a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\RPI\Local\ThroughSerial\BlinkTestTransmitter">
+      <UniqueIdentifier>{ae01a869-614d-4156-9575-1baf4b0cab25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\WINX86">
+      <UniqueIdentifier>{c922b1c1-cfe3-4136-8267-499395fdd146}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\WINX86\Local">
+      <UniqueIdentifier>{d16ccf5e-bbd4-4912-a0c6-adf3bcf4f491}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\WINX86\Local\EthernetTCP">
+      <UniqueIdentifier>{03b1fc5e-b776-4ebe-985a-4f367c58877a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\WINX86\Local\EthernetTCP\PingPong">
+      <UniqueIdentifier>{75de87e0-ce6b-434b-b713-566327e78e69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\WINX86\Local\EthernetTCP\PingPong\Receiver">
+      <UniqueIdentifier>{e64ef31e-0ebd-4e10-b492-9cdee85b81bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\WINX86\Local\EthernetTCP\PingPong\Transmitter">
+      <UniqueIdentifier>{0d703c6b-ca70-4cbc-8575-37550970803d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\WINX86\Local\EthernetTCP\RemoteWorker">
+      <UniqueIdentifier>{78a21500-771b-45a9-8814-9c7f98fd5196}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\WINX86\Local\EthernetTCP\RemoteWorker\Transmitter">
+      <UniqueIdentifier>{c921fb6f-9377-4078-ab00-198e56c279c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\WINX86\Local\GlobalUDP">
+      <UniqueIdentifier>{504150a2-c5af-4945-a623-e86024e99cb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\WINX86\Local\GlobalUDP\PingPong">
+      <UniqueIdentifier>{83dfb53d-6395-4b7f-a6cf-28d787a6f13c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\WINX86\Local\GlobalUDP\PingPong\Receiver">
+      <UniqueIdentifier>{8ed4faaf-fcc7-4700-b9b8-5804ba719e8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\WINX86\Local\GlobalUDP\PingPong\Transmitter">
+      <UniqueIdentifier>{e6175352-11d8-4027-a7df-f7c0be79753c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\WINX86\Local\LocalUDP">
+      <UniqueIdentifier>{0d7af112-5112-4b67-8974-8e956f45a83a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\WINX86\Local\LocalUDP\PingPong">
+      <UniqueIdentifier>{4aefd04c-a1c1-450a-8efd-d87b1273916a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\WINX86\Local\LocalUDP\PingPong\Receiver">
+      <UniqueIdentifier>{7844878a-0e5c-4294-8d96-09a53462bb06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\WINX86\Local\LocalUDP\PingPong\Transmitter">
+      <UniqueIdentifier>{a8871623-f05e-40ca-a48c-36aaef6467ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\WINX86\Local\ThroughSerial">
+      <UniqueIdentifier>{ec94630c-9f9a-44e4-8fb4-faa127857b2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\examples\WINX86\Local\ThroughSerial\BlinkTest">
+      <UniqueIdentifier>{563530e0-68fd-4080-bfdf-67e3025e1fea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\interfaces">
+      <UniqueIdentifier>{fc213cf5-840a-4aed-b066-dfe6137c09b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\interfaces\ARDUINO">
+      <UniqueIdentifier>{c718c0e4-9acf-48c3-8ade-4685486b74c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\interfaces\LINUX">
+      <UniqueIdentifier>{3b54a6e4-5c83-4016-abed-94a398c06b2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\interfaces\RPI">
+      <UniqueIdentifier>{d53f7360-1640-4a00-b38f-77943e9db45e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\interfaces\WINX86">
+      <UniqueIdentifier>{da6d103e-c211-4119-ab36-e9a83793ce06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\interfaces\WINX86\Serial">
+      <UniqueIdentifier>{617f268c-a6c8-4904-975b-7b32b6fbcf80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\strategies">
+      <UniqueIdentifier>{c71ed3e8-1768-4de1-bce3-2bf7cfe1fac5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\strategies\AnalogSampling">
+      <UniqueIdentifier>{fbeb77b3-c52c-49ed-905a-17f3ea7d2938}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\strategies\Any">
+      <UniqueIdentifier>{02a88b6f-50bc-4458-987d-ab918c7ce342}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\strategies\EthernetTCP">
+      <UniqueIdentifier>{1805d40d-f58d-428b-ad99-62d6287745d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\strategies\GlobalUDP">
+      <UniqueIdentifier>{203b03b8-b52f-490f-8295-351871ed02fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\strategies\LocalUDP">
+      <UniqueIdentifier>{e86383ad-1bba-4e96-b3b3-aaf3980d8874}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\strategies\OverSampling">
+      <UniqueIdentifier>{81b1288b-a337-41d9-af55-74f8492365c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\strategies\SoftwareBitBang">
+      <UniqueIdentifier>{1e900fc3-5287-4137-a70d-cc5d5fbd4665}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\strategies\ThroughLoRa">
+      <UniqueIdentifier>{d339f7a2-95ad-4e5c-bb7e-1700eb0fa62a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\strategies\ThroughSerial">
+      <UniqueIdentifier>{c786a856-be8d-4132-b27a-6e4060bd72be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\utils">
+      <UniqueIdentifier>{a712f86c-1682-4738-bd34-5d829feb389b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\PJON\utils\crc">
+      <UniqueIdentifier>{2161c9db-1333-4673-af5b-95be3ff63bf2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\Time-master">
+      <UniqueIdentifier>{a803bd73-c04b-41a5-9faf-bf198bd58fa1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\Time-master\examples">
+      <UniqueIdentifier>{640d3701-3b63-40eb-97e4-c685a1121594}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\Time-master\examples\Processing">
+      <UniqueIdentifier>{90d6df44-efd6-4791-b76b-e458b7fbb130}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\Time-master\examples\Processing\SyncArduinoClock">
+      <UniqueIdentifier>{874b9c4f-d41a-4981-ac90-1ffe7ea34e4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\TinyGPSPlus">
+      <UniqueIdentifier>{105200d5-74ad-4f75-abc7-c7b6d5cedf6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\TinyGPSPlus\examples">
+      <UniqueIdentifier>{21f3350f-6550-430d-9ca6-a932123fccc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\TinyGPSPlus\examples\SatElevTracker">
+      <UniqueIdentifier>{ead5ee09-2c7a-4236-ba54-e23673e61431}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\TinyGPSPlus\src">
+      <UniqueIdentifier>{ad30531d-e312-4828-b725-924c110620b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\utils">
+      <UniqueIdentifier>{d723a15f-4f6f-4dd5-87ed-145d20362d9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api">
+      <UniqueIdentifier>{de9a8241-974e-4cbd-82cc-6ce1c9dcbcdc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries">
+      <UniqueIdentifier>{dc7844de-5abf-4f82-8897-bb4dfd16a325}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\arduino-LoRa-master">
+      <UniqueIdentifier>{cb37cd6c-0242-4d74-a38f-3f0ad6a6c697}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\arduino-LoRa-master\src">
+      <UniqueIdentifier>{4f4b1767-960c-4a03-a012-8ea73295f164}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\ArduinoJson">
+      <UniqueIdentifier>{3564a6e1-b6dd-45b4-a645-7c41a1c3103b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\ArduinoJson\fuzzing">
+      <UniqueIdentifier>{9cf3c6ca-563c-475b-b2e5-9c9e3edbc05d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\ArduinoJson\src">
+      <UniqueIdentifier>{568e43f3-0f88-4ee1-a70d-037bacec491c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson">
+      <UniqueIdentifier>{993bafbd-9c66-49b3-9192-5a3af9e6458f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Data">
+      <UniqueIdentifier>{9f12326d-2d31-4f3c-8f03-b0fca4e2b6a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Deserialization">
+      <UniqueIdentifier>{8c0fb1d7-fba5-48ed-92c9-dd0d8ac7787a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Polyfills">
+      <UniqueIdentifier>{77ee7414-0898-4624-ba5a-5f520f437430}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Serialization">
+      <UniqueIdentifier>{cbfa640c-fee7-4b69-bd7f-8e9050e6d0c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\StringTraits">
+      <UniqueIdentifier>{a15988e0-2421-4532-84d7-4c3d5a10144d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\TypeTraits">
+      <UniqueIdentifier>{44f17079-d9ae-4bf1-a30f-8658642dfaee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\ArduinoJson\test">
+      <UniqueIdentifier>{54cf5b85-3628-407a-ad53-bd93fd5b8fc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\ArduinoJson\test\DynamicJsonBuffer">
+      <UniqueIdentifier>{a451b994-f373-485d-a71e-96ce3262df6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\ArduinoJson\test\IntegrationTests">
+      <UniqueIdentifier>{5c02802b-0dfb-4ee1-a942-72687a4f9194}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\ArduinoJson\test\JsonArray">
+      <UniqueIdentifier>{0c7c61a1-bb59-4ee7-9e9d-603fd0c9f326}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\ArduinoJson\test\JsonBuffer">
+      <UniqueIdentifier>{da54dd3b-605f-499c-83cc-b22b619a3213}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\ArduinoJson\test\JsonObject">
+      <UniqueIdentifier>{c79e36a6-9e3b-4369-abeb-60bfb700923a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\ArduinoJson\test\JsonVariant">
+      <UniqueIdentifier>{0062f940-2de4-4441-ab14-e59351f231ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\ArduinoJson\test\JsonWriter">
+      <UniqueIdentifier>{b70f19ba-c702-4f8c-a6b1-c1c3db17802c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\ArduinoJson\test\Misc">
+      <UniqueIdentifier>{9fdff446-2bed-4981-8785-738734605f6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\ArduinoJson\test\Polyfills">
+      <UniqueIdentifier>{53cb71fa-c973-497a-9f7f-2029d900d5d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\ArduinoJson\test\StaticJsonBuffer">
+      <UniqueIdentifier>{7f3df7f0-c810-4fbc-9814-da27a013293a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\ArduinoJson\third-party">
+      <UniqueIdentifier>{2ca8104c-5c65-4907-8692-bd02c1ad6919}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\ArduinoJson\third-party\catch">
+      <UniqueIdentifier>{d9ade02c-989f-4ad8-9cd0-f3616752ba46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\espsoftwareserial-master">
+      <UniqueIdentifier>{ad7a251a-41a7-4119-8a1e-334016e182e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\Modbus">
+      <UniqueIdentifier>{78708764-0122-40e4-b8ac-23ff3a9b7dbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\ModbusSerial">
+      <UniqueIdentifier>{2fec629f-b915-4c78-9f6f-fa57fe84439d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\nextion">
+      <UniqueIdentifier>{1a9df708-52fd-4e69-94bf-763211029d02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\nextion\doc">
+      <UniqueIdentifier>{b7fa95c6-7192-4715-ac7e-ff95d43ca8dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\nextion\doc\Documentation">
+      <UniqueIdentifier>{bc3f5213-d012-41f2-a5ea-1b3b89bb7a65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\nextion\doc\Documentation\latex">
+      <UniqueIdentifier>{918bdb48-d72b-4fbb-8ada-90c94aae2fe6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\nextion\doc\latex">
+      <UniqueIdentifier>{4aefef90-c34b-4a57-8160-9d0b49ac3c9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\nextion\latex">
+      <UniqueIdentifier>{50e3b745-4b64-41d9-8656-b907e6f6a490}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON">
+      <UniqueIdentifier>{25b5095a-19f2-4f9a-8b73-975887143082}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples">
+      <UniqueIdentifier>{593481f1-9559-4e53-ac1d-1e0d352e92f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\LINUX">
+      <UniqueIdentifier>{9de3165d-5bf1-4208-96fe-7a1db5baa18b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\LINUX\Local">
+      <UniqueIdentifier>{83bf17d8-5a4e-49ef-8d4f-26976700c9ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\LINUX\Local\EthernetTCP">
+      <UniqueIdentifier>{e076c5d4-11a5-42a7-8422-1e808f2de3e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\LINUX\Local\EthernetTCP\PingPong">
+      <UniqueIdentifier>{b125199d-fe21-4a9d-95ab-9c75d3c2c3da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\LINUX\Local\EthernetTCP\PingPong\Receiver">
+      <UniqueIdentifier>{7e80bc6e-967a-4491-9666-885154dfc7ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\LINUX\Local\EthernetTCP\PingPong\Transmitter">
+      <UniqueIdentifier>{9c0a9f20-8dbf-4375-b606-4c3324d20711}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\LINUX\Local\EthernetTCP\RemoteWorker">
+      <UniqueIdentifier>{3a955021-c0cb-40aa-963d-57894ddbd17a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\LINUX\Local\EthernetTCP\RemoteWorker\Transmitter">
+      <UniqueIdentifier>{55008914-c171-4728-9fee-49b1ab024aa6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\LINUX\Local\GlobalUDP">
+      <UniqueIdentifier>{f93245ab-81b8-4d10-ac81-231aa54b1630}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\LINUX\Local\GlobalUDP\PingPong">
+      <UniqueIdentifier>{67dfebba-4253-4bb0-8524-e747dd75f454}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\LINUX\Local\GlobalUDP\PingPong\Receiver">
+      <UniqueIdentifier>{af54d185-20c6-4b9c-a482-129e0b01ef8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\LINUX\Local\GlobalUDP\PingPong\Transmitter">
+      <UniqueIdentifier>{609d76a7-2e7f-436a-897d-b598773219d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\LINUX\Local\LocalUDP">
+      <UniqueIdentifier>{311a43f8-7573-47aa-905c-f49bbb863649}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\LINUX\Local\LocalUDP\PingPong">
+      <UniqueIdentifier>{367e9985-686c-431b-90fe-83c8e0653920}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\LINUX\Local\LocalUDP\PingPong\Receiver">
+      <UniqueIdentifier>{da3d0474-7295-4503-8f64-fe34f321e001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\LINUX\Local\LocalUDP\PingPong\Transmitter">
+      <UniqueIdentifier>{2aba3ddd-7c61-4f35-92b0-39d6139fddcd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\RPI">
+      <UniqueIdentifier>{594b06bb-639e-442e-9d77-2f2a63d65b48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\RPI\Local">
+      <UniqueIdentifier>{36ccefe5-391c-4a0b-b21b-9782dcec5b40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\RPI\Local\ThroughSerial">
+      <UniqueIdentifier>{eb2628b2-0476-4cf0-b9d2-a3f26e68f613}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\RPI\Local\ThroughSerial\BlinkTestReceiver">
+      <UniqueIdentifier>{7cfcf090-7ebc-41f7-85fa-4ac99e011242}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\RPI\Local\ThroughSerial\BlinkTestTransmitter">
+      <UniqueIdentifier>{ae8f159c-45c8-4fef-b8c8-d30d29829121}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\WINX86">
+      <UniqueIdentifier>{4361cbe7-4b07-4668-b388-76966344ea02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\WINX86\Local">
+      <UniqueIdentifier>{fc571104-15cc-47d6-9d04-eee176576995}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\WINX86\Local\EthernetTCP">
+      <UniqueIdentifier>{d5f9cc29-9c71-450d-8cbf-345bd251b199}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\WINX86\Local\EthernetTCP\PingPong">
+      <UniqueIdentifier>{754353a9-3845-49f6-ae1d-5817b09969f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\WINX86\Local\EthernetTCP\PingPong\Receiver">
+      <UniqueIdentifier>{080bb487-7fe8-4530-a999-e42f37a4a080}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\WINX86\Local\EthernetTCP\PingPong\Transmitter">
+      <UniqueIdentifier>{7d265eaa-728c-42b4-b24a-309a97b06443}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\WINX86\Local\EthernetTCP\RemoteWorker">
+      <UniqueIdentifier>{551d82eb-4bcc-43bd-974c-b5a3436eb9da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\WINX86\Local\EthernetTCP\RemoteWorker\Transmitter">
+      <UniqueIdentifier>{b60e5b11-d720-4f2b-9bbc-b6147738844d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\WINX86\Local\GlobalUDP">
+      <UniqueIdentifier>{6b659a4e-5c77-4919-bf4f-2dded10e5c7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\WINX86\Local\GlobalUDP\PingPong">
+      <UniqueIdentifier>{5416e52f-daa7-402c-9bd0-686746a3a2a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\WINX86\Local\GlobalUDP\PingPong\Receiver">
+      <UniqueIdentifier>{4c7ceb8d-a2eb-4374-b72f-099a24e6083f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\WINX86\Local\GlobalUDP\PingPong\Transmitter">
+      <UniqueIdentifier>{66c0fc51-76bd-4473-bffe-d1fcb02e418f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\WINX86\Local\LocalUDP">
+      <UniqueIdentifier>{1f973c41-e823-41c0-a3e6-dc301f431f48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\WINX86\Local\LocalUDP\PingPong">
+      <UniqueIdentifier>{1b75169d-ef13-48e6-8bfe-dac8ac12b633}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\WINX86\Local\LocalUDP\PingPong\Receiver">
+      <UniqueIdentifier>{79991d07-7446-480f-814f-8ea95cc2a153}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\WINX86\Local\LocalUDP\PingPong\Transmitter">
+      <UniqueIdentifier>{67bd7779-2fa6-4db0-a096-2ca9bc9c6456}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\WINX86\Local\ThroughSerial">
+      <UniqueIdentifier>{fa680320-c831-4753-85f8-701e1715d34c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\examples\WINX86\Local\ThroughSerial\BlinkTest">
+      <UniqueIdentifier>{d7cdedff-6106-4ecb-8df8-c36a2f897265}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\interfaces">
+      <UniqueIdentifier>{da43b5e6-aeb6-4e40-8684-22f8b940322c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\interfaces\ARDUINO">
+      <UniqueIdentifier>{2f766239-c12a-449b-a731-03ccc5ba869e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\interfaces\LINUX">
+      <UniqueIdentifier>{8e22fee8-ca69-4d93-8977-94d999ba9639}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\interfaces\RPI">
+      <UniqueIdentifier>{051e1fbe-8bf5-4e4f-b352-5ff8fc920c97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\interfaces\WINX86">
+      <UniqueIdentifier>{6478701f-6476-410c-b9d4-c872b621ce3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\interfaces\WINX86\Serial">
+      <UniqueIdentifier>{052fcef5-0fb9-4cca-94a5-c73987b09500}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\strategies">
+      <UniqueIdentifier>{2e97a403-0794-4fa5-bc00-96a0ddfaa23f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\strategies\AnalogSampling">
+      <UniqueIdentifier>{cae7aa34-3e21-472e-9cbf-9551e6f04f11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\strategies\Any">
+      <UniqueIdentifier>{704aa217-c67a-4cb6-9afd-fbddd4dbe4b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\strategies\EthernetTCP">
+      <UniqueIdentifier>{5d32e12a-b389-473f-b3ca-3e1e43d04e56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\strategies\GlobalUDP">
+      <UniqueIdentifier>{0c56da42-2ac1-4de4-95c1-2f7e0328b71d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\strategies\LocalUDP">
+      <UniqueIdentifier>{dd129e09-83b2-42c7-8496-98823d379dd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\strategies\OverSampling">
+      <UniqueIdentifier>{eaaf34bf-f3ed-4bc5-bbbf-7b88b9a44454}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\strategies\SoftwareBitBang">
+      <UniqueIdentifier>{11eaa954-4366-4255-95cf-78ec12a850b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\strategies\ThroughLoRa">
+      <UniqueIdentifier>{a9f2c7be-d8d5-4754-947a-9a5f5155a281}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\strategies\ThroughSerial">
+      <UniqueIdentifier>{85066716-6913-4677-8558-7eecfe3281e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\utils">
+      <UniqueIdentifier>{a50e5296-027c-4e32-89dc-aa8e012b3255}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\PJON\utils\crc">
+      <UniqueIdentifier>{c2f5c2e9-dc69-454a-87a1-043c742748d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\Time-master">
+      <UniqueIdentifier>{291bd1b0-2ac0-4a00-a032-8fbe7fd3aa26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\Time-master\examples">
+      <UniqueIdentifier>{5b6eb1da-5312-44c5-a7d0-10f2e1e25d60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\Time-master\examples\Processing">
+      <UniqueIdentifier>{ab66d181-ecf3-421b-a0c3-43017120af45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\Time-master\examples\Processing\SyncArduinoClock">
+      <UniqueIdentifier>{b380e87d-2d53-422a-bc17-e18fe3a898ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\TinyGPSPlus">
+      <UniqueIdentifier>{4f3786a5-e0a7-438a-8b9e-41a2f7cc801b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\TinyGPSPlus\examples">
+      <UniqueIdentifier>{7fadd703-ac98-43b6-a41b-3be816602c34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\TinyGPSPlus\examples\SatElevTracker">
+      <UniqueIdentifier>{49c8b4ee-b5d7-4d86-8346-34bf96281ebc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\TinyGPSPlus\src">
+      <UniqueIdentifier>{a2d64e0f-2124-4c2e-b660-d73d7977d5a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\utils">
+      <UniqueIdentifier>{e943d005-47c3-4eeb-b63d-ae1147972117}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\FS">
+      <UniqueIdentifier>{0f96fa31-c45b-479f-9915-d8e64a24e0df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\FS\src">
+      <UniqueIdentifier>{d52c1e0e-29c9-4a32-820c-502fd19bbe23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\FS">
+      <UniqueIdentifier>{bdc21c61-004b-4764-8894-2c774e8e0b91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\FS\src">
+      <UniqueIdentifier>{9fb1873d-c5af-4933-a5fc-a70898e70284}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\SPIFFS">
+      <UniqueIdentifier>{b352cec6-131f-4d29-b249-cd1c59f317f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_micro-api\libraries\SPIFFS\src">
+      <UniqueIdentifier>{84c7af5f-b71f-4c97-aeab-835a64fd7864}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\SPIFFS">
+      <UniqueIdentifier>{19cd7973-f2b7-4a65-80e7-cdbbfb9b2111}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\_micro-api\libraries\SPIFFS\src">
+      <UniqueIdentifier>{8de2cdb2-5cd3-4b9d-8b67-5df2e5b0444e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ESP32.ino" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="__vm\.ESP32.vsarduino.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigFileManager.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GPSManager.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HMIManager.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="JSONParser.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LinuxDevice.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LoraManager.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MeasurementsManager.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QueryManager.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RadioDevice.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RS485Device.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SerialManager.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <None Include="_micro-api\libraries\arduino-LoRa-master\keywords.txt">
+      <Filter>Source Files\_micro-api\libraries\arduino-LoRa-master</Filter>
+    </None>
+    <ClCompile Include="_micro-api\libraries\arduino-LoRa-master\src\LoRa.cpp">
+      <Filter>Source Files\_micro-api\libraries\arduino-LoRa-master\src</Filter>
+    </ClCompile>
+    <None Include="_micro-api\libraries\ArduinoJson\CMakeLists.txt">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson</Filter>
+    </None>
+    <None Include="_micro-api\libraries\ArduinoJson\keywords.txt">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson</Filter>
+    </None>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\fuzzing\fuzzer.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\fuzzing</Filter>
+    </ClCompile>
+    <None Include="_micro-api\libraries\ArduinoJson\fuzzing\Makefile">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\fuzzing</Filter>
+    </None>
+    <None Include="_micro-api\libraries\ArduinoJson\test\CMakeLists.txt">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test</Filter>
+    </None>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\DynamicJsonBuffer\alloc.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\DynamicJsonBuffer</Filter>
+    </ClCompile>
+    <None Include="_micro-api\libraries\ArduinoJson\test\DynamicJsonBuffer\CMakeLists.txt">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\DynamicJsonBuffer</Filter>
+    </None>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\DynamicJsonBuffer\createArray.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\DynamicJsonBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\DynamicJsonBuffer\createObject.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\DynamicJsonBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\DynamicJsonBuffer\no_memory.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\DynamicJsonBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\DynamicJsonBuffer\size.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\DynamicJsonBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\DynamicJsonBuffer\startString.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\DynamicJsonBuffer</Filter>
+    </ClCompile>
+    <None Include="_micro-api\libraries\ArduinoJson\test\IntegrationTests\CMakeLists.txt">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\IntegrationTests</Filter>
+    </None>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\IntegrationTests\gbathree.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\IntegrationTests</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\IntegrationTests\round_trip.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\IntegrationTests</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonArray\add.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonArray</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonArray\basics.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonArray</Filter>
+    </ClCompile>
+    <None Include="_micro-api\libraries\ArduinoJson\test\JsonArray\CMakeLists.txt">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonArray</Filter>
+    </None>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonArray\copyFrom.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonArray</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonArray\copyTo.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonArray</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonArray\invalid.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonArray</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonArray\iterator.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonArray</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonArray\prettyPrintTo.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonArray</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonArray\printTo.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonArray</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonArray\remove.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonArray</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonArray\set.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonArray</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonArray\size.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonArray</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonArray\subscript.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonArray</Filter>
+    </ClCompile>
+    <None Include="_micro-api\libraries\ArduinoJson\test\JsonBuffer\CMakeLists.txt">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonBuffer</Filter>
+    </None>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonBuffer\nested.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonBuffer\nestingLimit.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonBuffer\parse.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonBuffer\parseArray.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonBuffer\parseObject.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonObject\basics.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonObject</Filter>
+    </ClCompile>
+    <None Include="_micro-api\libraries\ArduinoJson\test\JsonObject\CMakeLists.txt">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonObject</Filter>
+    </None>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonObject\containsKey.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonObject</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonObject\get.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonObject</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonObject\invalid.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonObject</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonObject\iterator.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonObject</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonObject\prettyPrintTo.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonObject</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonObject\printTo.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonObject</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonObject\remove.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonObject</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonObject\set.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonObject</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonObject\size.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonObject</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonObject\subscript.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonObject</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonVariant\as.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonVariant</Filter>
+    </ClCompile>
+    <None Include="_micro-api\libraries\ArduinoJson\test\JsonVariant\CMakeLists.txt">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonVariant</Filter>
+    </None>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonVariant\compare.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonVariant</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonVariant\copy.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonVariant</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonVariant\is.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonVariant</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonVariant\or.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonVariant</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonVariant\printTo.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonVariant</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonVariant\set_get.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonVariant</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonVariant\subscript.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonVariant</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonVariant\success.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonVariant</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonVariant\undefined.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonVariant</Filter>
+    </ClCompile>
+    <None Include="_micro-api\libraries\ArduinoJson\test\JsonWriter\CMakeLists.txt">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonWriter</Filter>
+    </None>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonWriter\writeFloat.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonWriter</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\JsonWriter\writeString.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\JsonWriter</Filter>
+    </ClCompile>
+    <None Include="_micro-api\libraries\ArduinoJson\test\Misc\CMakeLists.txt">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\Misc</Filter>
+    </None>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\Misc\deprecated.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\Misc\FloatParts.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\Misc\std_stream.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\Misc\std_string.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\Misc\StringBuilder.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\Misc\StringTraits.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\Misc\TypeTraits.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\Misc\unsigned_char.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\Misc\vla.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\Misc</Filter>
+    </ClCompile>
+    <None Include="_micro-api\libraries\ArduinoJson\test\Polyfills\CMakeLists.txt">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\Polyfills</Filter>
+    </None>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\Polyfills\isFloat.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\Polyfills</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\Polyfills\isInteger.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\Polyfills</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\Polyfills\parseFloat.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\Polyfills</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\Polyfills\parseInteger.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\Polyfills</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\StaticJsonBuffer\alloc.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\StaticJsonBuffer</Filter>
+    </ClCompile>
+    <None Include="_micro-api\libraries\ArduinoJson\test\StaticJsonBuffer\CMakeLists.txt">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\StaticJsonBuffer</Filter>
+    </None>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\StaticJsonBuffer\createArray.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\StaticJsonBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\StaticJsonBuffer\createObject.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\StaticJsonBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\StaticJsonBuffer\parseArray.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\StaticJsonBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\StaticJsonBuffer\parseObject.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\StaticJsonBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\StaticJsonBuffer\size.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\StaticJsonBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\test\StaticJsonBuffer\startString.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\test\StaticJsonBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\ArduinoJson\third-party\catch\catch.cpp">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\third-party\catch</Filter>
+    </ClCompile>
+    <None Include="_micro-api\libraries\ArduinoJson\third-party\catch\CMakeLists.txt">
+      <Filter>Source Files\_micro-api\libraries\ArduinoJson\third-party\catch</Filter>
+    </None>
+    <None Include="_micro-api\libraries\espsoftwareserial-master\keywords.txt">
+      <Filter>Source Files\_micro-api\libraries\espsoftwareserial-master</Filter>
+    </None>
+    <ClCompile Include="_micro-api\libraries\espsoftwareserial-master\SoftwareSerial.cpp">
+      <Filter>Source Files\_micro-api\libraries\espsoftwareserial-master</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\Modbus\Modbus.cpp">
+      <Filter>Source Files\_micro-api\libraries\Modbus</Filter>
+    </ClCompile>
+    <None Include="_micro-api\libraries\ModbusSerial\keywords.txt">
+      <Filter>Source Files\_micro-api\libraries\ModbusSerial</Filter>
+    </None>
+    <ClCompile Include="_micro-api\libraries\ModbusSerial\ModbusSerial.cpp">
+      <Filter>Source Files\_micro-api\libraries\ModbusSerial</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\nextion\NexButton.cpp">
+      <Filter>Source Files\_micro-api\libraries\nextion</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\nextion\NexCheckbox.cpp">
+      <Filter>Source Files\_micro-api\libraries\nextion</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\nextion\NexCrop.cpp">
+      <Filter>Source Files\_micro-api\libraries\nextion</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\nextion\NexDualStateButton.cpp">
+      <Filter>Source Files\_micro-api\libraries\nextion</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\nextion\NexGauge.cpp">
+      <Filter>Source Files\_micro-api\libraries\nextion</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\nextion\NexGpio.cpp">
+      <Filter>Source Files\_micro-api\libraries\nextion</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\nextion\NexHardware.cpp">
+      <Filter>Source Files\_micro-api\libraries\nextion</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\nextion\NexHotspot.cpp">
+      <Filter>Source Files\_micro-api\libraries\nextion</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\nextion\NexNumber.cpp">
+      <Filter>Source Files\_micro-api\libraries\nextion</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\nextion\NexObject.cpp">
+      <Filter>Source Files\_micro-api\libraries\nextion</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\nextion\NexPage.cpp">
+      <Filter>Source Files\_micro-api\libraries\nextion</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\nextion\NexPicture.cpp">
+      <Filter>Source Files\_micro-api\libraries\nextion</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\nextion\NexProgressBar.cpp">
+      <Filter>Source Files\_micro-api\libraries\nextion</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\nextion\NexRadio.cpp">
+      <Filter>Source Files\_micro-api\libraries\nextion</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\nextion\NexRtc.cpp">
+      <Filter>Source Files\_micro-api\libraries\nextion</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\nextion\NexScrolltext.cpp">
+      <Filter>Source Files\_micro-api\libraries\nextion</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\nextion\NexSlider.cpp">
+      <Filter>Source Files\_micro-api\libraries\nextion</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\nextion\NexText.cpp">
+      <Filter>Source Files\_micro-api\libraries\nextion</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\nextion\NexTimer.cpp">
+      <Filter>Source Files\_micro-api\libraries\nextion</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\nextion\NexTouch.cpp">
+      <Filter>Source Files\_micro-api\libraries\nextion</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\nextion\NexVariable.cpp">
+      <Filter>Source Files\_micro-api\libraries\nextion</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\nextion\NexWaveform.cpp">
+      <Filter>Source Files\_micro-api\libraries\nextion</Filter>
+    </ClCompile>
+    <None Include="_micro-api\libraries\nextion\version.txt">
+      <Filter>Source Files\_micro-api\libraries\nextion</Filter>
+    </None>
+    <None Include="_micro-api\libraries\nextion\doc\Documentation\latex\Makefile">
+      <Filter>Source Files\_micro-api\libraries\nextion\doc\Documentation\latex</Filter>
+    </None>
+    <None Include="_micro-api\libraries\nextion\doc\latex\Makefile">
+      <Filter>Source Files\_micro-api\libraries\nextion\doc\latex</Filter>
+    </None>
+    <None Include="_micro-api\libraries\nextion\latex\Makefile">
+      <Filter>Source Files\_micro-api\libraries\nextion\latex</Filter>
+    </None>
+    <None Include="_micro-api\libraries\PJON\keywords.txt">
+      <Filter>Source Files\_micro-api\libraries\PJON</Filter>
+    </None>
+    <None Include="_micro-api\libraries\PJON\examples\LINUX\Local\EthernetTCP\PingPong\Receiver\Makefile">
+      <Filter>Source Files\_micro-api\libraries\PJON\examples\LINUX\Local\EthernetTCP\PingPong\Receiver</Filter>
+    </None>
+    <ClCompile Include="_micro-api\libraries\PJON\examples\LINUX\Local\EthernetTCP\PingPong\Receiver\Receiver.cpp">
+      <Filter>Source Files\_micro-api\libraries\PJON\examples\LINUX\Local\EthernetTCP\PingPong\Receiver</Filter>
+    </ClCompile>
+    <None Include="_micro-api\libraries\PJON\examples\LINUX\Local\EthernetTCP\PingPong\Transmitter\Makefile">
+      <Filter>Source Files\_micro-api\libraries\PJON\examples\LINUX\Local\EthernetTCP\PingPong\Transmitter</Filter>
+    </None>
+    <ClCompile Include="_micro-api\libraries\PJON\examples\LINUX\Local\EthernetTCP\PingPong\Transmitter\Transmitter.cpp">
+      <Filter>Source Files\_micro-api\libraries\PJON\examples\LINUX\Local\EthernetTCP\PingPong\Transmitter</Filter>
+    </ClCompile>
+    <None Include="_micro-api\libraries\PJON\examples\LINUX\Local\EthernetTCP\RemoteWorker\Transmitter\Makefile">
+      <Filter>Source Files\_micro-api\libraries\PJON\examples\LINUX\Local\EthernetTCP\RemoteWorker\Transmitter</Filter>
+    </None>
+    <None Include="_micro-api\libraries\PJON\examples\LINUX\Local\GlobalUDP\PingPong\Receiver\Makefile">
+      <Filter>Source Files\_micro-api\libraries\PJON\examples\LINUX\Local\GlobalUDP\PingPong\Receiver</Filter>
+    </None>
+    <ClCompile Include="_micro-api\libraries\PJON\examples\LINUX\Local\GlobalUDP\PingPong\Receiver\Receiver.cpp">
+      <Filter>Source Files\_micro-api\libraries\PJON\examples\LINUX\Local\GlobalUDP\PingPong\Receiver</Filter>
+    </ClCompile>
+    <None Include="_micro-api\libraries\PJON\examples\LINUX\Local\GlobalUDP\PingPong\Transmitter\Makefile">
+      <Filter>Source Files\_micro-api\libraries\PJON\examples\LINUX\Local\GlobalUDP\PingPong\Transmitter</Filter>
+    </None>
+    <ClCompile Include="_micro-api\libraries\PJON\examples\LINUX\Local\GlobalUDP\PingPong\Transmitter\Transmitter.cpp">
+      <Filter>Source Files\_micro-api\libraries\PJON\examples\LINUX\Local\GlobalUDP\PingPong\Transmitter</Filter>
+    </ClCompile>
+    <None Include="_micro-api\libraries\PJON\examples\LINUX\Local\LocalUDP\PingPong\Receiver\Makefile">
+      <Filter>Source Files\_micro-api\libraries\PJON\examples\LINUX\Local\LocalUDP\PingPong\Receiver</Filter>
+    </None>
+    <ClCompile Include="_micro-api\libraries\PJON\examples\LINUX\Local\LocalUDP\PingPong\Receiver\Receiver.cpp">
+      <Filter>Source Files\_micro-api\libraries\PJON\examples\LINUX\Local\LocalUDP\PingPong\Receiver</Filter>
+    </ClCompile>
+    <None Include="_micro-api\libraries\PJON\examples\LINUX\Local\LocalUDP\PingPong\Transmitter\Makefile">
+      <Filter>Source Files\_micro-api\libraries\PJON\examples\LINUX\Local\LocalUDP\PingPong\Transmitter</Filter>
+    </None>
+    <ClCompile Include="_micro-api\libraries\PJON\examples\LINUX\Local\LocalUDP\PingPong\Transmitter\Transmitter.cpp">
+      <Filter>Source Files\_micro-api\libraries\PJON\examples\LINUX\Local\LocalUDP\PingPong\Transmitter</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\PJON\examples\RPI\Local\ThroughSerial\BlinkTestReceiver\Receiver.cpp">
+      <Filter>Source Files\_micro-api\libraries\PJON\examples\RPI\Local\ThroughSerial\BlinkTestReceiver</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\PJON\examples\RPI\Local\ThroughSerial\BlinkTestTransmitter\Transmitter.cpp">
+      <Filter>Source Files\_micro-api\libraries\PJON\examples\RPI\Local\ThroughSerial\BlinkTestTransmitter</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\PJON\examples\WINX86\Local\EthernetTCP\PingPong\Receiver\Receiver.cpp">
+      <Filter>Source Files\_micro-api\libraries\PJON\examples\WINX86\Local\EthernetTCP\PingPong\Receiver</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\PJON\examples\WINX86\Local\EthernetTCP\PingPong\Transmitter\Transmitter.cpp">
+      <Filter>Source Files\_micro-api\libraries\PJON\examples\WINX86\Local\EthernetTCP\PingPong\Transmitter</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\PJON\examples\WINX86\Local\EthernetTCP\RemoteWorker\Transmitter\Transmitter.cpp">
+      <Filter>Source Files\_micro-api\libraries\PJON\examples\WINX86\Local\EthernetTCP\RemoteWorker\Transmitter</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\PJON\examples\WINX86\Local\GlobalUDP\PingPong\Receiver\Receiver.cpp">
+      <Filter>Source Files\_micro-api\libraries\PJON\examples\WINX86\Local\GlobalUDP\PingPong\Receiver</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\PJON\examples\WINX86\Local\GlobalUDP\PingPong\Transmitter\Transmitter.cpp">
+      <Filter>Source Files\_micro-api\libraries\PJON\examples\WINX86\Local\GlobalUDP\PingPong\Transmitter</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\PJON\examples\WINX86\Local\LocalUDP\PingPong\Receiver\Receiver.cpp">
+      <Filter>Source Files\_micro-api\libraries\PJON\examples\WINX86\Local\LocalUDP\PingPong\Receiver</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\PJON\examples\WINX86\Local\LocalUDP\PingPong\Transmitter\Transmitter.cpp">
+      <Filter>Source Files\_micro-api\libraries\PJON\examples\WINX86\Local\LocalUDP\PingPong\Transmitter</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\PJON\examples\WINX86\Local\ThroughSerial\BlinkTest\Transmitter.cpp">
+      <Filter>Source Files\_micro-api\libraries\PJON\examples\WINX86\Local\ThroughSerial\BlinkTest</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\PJON\interfaces\WINX86\Serial\Serial.cpp">
+      <Filter>Source Files\_micro-api\libraries\PJON\interfaces\WINX86\Serial</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\Time-master\DateStrings.cpp">
+      <Filter>Source Files\_micro-api\libraries\Time-master</Filter>
+    </ClCompile>
+    <None Include="_micro-api\libraries\Time-master\keywords.txt">
+      <Filter>Source Files\_micro-api\libraries\Time-master</Filter>
+    </None>
+    <ClCompile Include="_micro-api\libraries\Time-master\Time.cpp">
+      <Filter>Source Files\_micro-api\libraries\Time-master</Filter>
+    </ClCompile>
+    <None Include="_micro-api\libraries\Time-master\examples\Processing\SyncArduinoClock\readme.txt">
+      <Filter>Source Files\_micro-api\libraries\Time-master\examples\Processing\SyncArduinoClock</Filter>
+    </None>
+    <None Include="_micro-api\libraries\TinyGPSPlus\keywords.txt">
+      <Filter>Source Files\_micro-api\libraries\TinyGPSPlus</Filter>
+    </None>
+    <None Include="_micro-api\libraries\TinyGPSPlus\examples\SatElevTracker\sample_satellite_elevation_log.txt">
+      <Filter>Source Files\_micro-api\libraries\TinyGPSPlus\examples\SatElevTracker</Filter>
+    </None>
+    <ClCompile Include="_micro-api\libraries\TinyGPSPlus\src\TinyGPS++.cpp">
+      <Filter>Source Files\_micro-api\libraries\TinyGPSPlus\src</Filter>
+    </ClCompile>
+    <ClInclude Include="_micro-api\libraries\arduino-LoRa-master\src\LoRa.h">
+      <Filter>Header Files\_micro-api\libraries\arduino-LoRa-master\src</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\ArduinoJson.h">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson.h">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Configuration.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\DynamicJsonBuffer.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\JsonArray.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\JsonArrayImpl.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\JsonArraySubscript.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\JsonBuffer.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\JsonBufferBase.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\JsonBufferImpl.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\JsonObject.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\JsonObjectImpl.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\JsonObjectSubscript.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\JsonPair.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\JsonVariant.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\JsonVariantBase.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\JsonVariantCasts.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\JsonVariantComparisons.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\JsonVariantImpl.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\JsonVariantOr.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\JsonVariantSubscripts.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\RawJson.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\StaticJsonBuffer.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Data\Encoding.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Data\JsonBufferAllocated.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Data\JsonFloat.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Data\JsonInteger.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Data\JsonVariantAs.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Data\JsonVariantContent.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Data\JsonVariantDefault.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Data\JsonVariantType.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Data\List.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Data\ListConstIterator.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Data\ListIterator.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Data\ListNode.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Data\NonCopyable.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Data\ReferenceType.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Data\ValueSaver.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Deserialization\Comments.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Deserialization</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Deserialization\JsonBinaryParser.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Deserialization</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Deserialization\JsonBinaryParserImpl.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Deserialization</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Deserialization\JsonParser.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Deserialization</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Deserialization\JsonParserImpl.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Deserialization</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Deserialization\StringWriter.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Deserialization</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Polyfills\attributes.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Polyfills</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Polyfills\convertdouble.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Polyfills</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Polyfills\ctype.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Polyfills</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Polyfills\isFloat.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Polyfills</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Polyfills\isInteger.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Polyfills</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Polyfills\math.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Polyfills</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Polyfills\parseFloat.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Polyfills</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Polyfills\parseInteger.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Polyfills</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Serialization\DummyPrint.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Serialization\DynamicStringBuilder.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Serialization\FloatParts.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Serialization\IndentedPrint.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Serialization\JsonBinarySerializerImpl.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Serialization\JsonPrintable.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Serialization\JsonSerializer.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Serialization\JsonSerializerImpl.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Serialization\JsonWriter.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Serialization\Prettyfier.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Serialization\StaticStringBuilder.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\Serialization\StreamPrintAdapter.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\Serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\StringTraits\ArduinoStream.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\StringTraits</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\StringTraits\CharPointer.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\StringTraits</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\StringTraits\FlashString.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\StringTraits</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\StringTraits\StdStream.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\StringTraits</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\StringTraits\StdString.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\StringTraits</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\StringTraits\StringTraits.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\StringTraits</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\TypeTraits\EnableIf.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\TypeTraits</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\TypeTraits\FloatTraits.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\TypeTraits</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\TypeTraits\IsArray.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\TypeTraits</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\TypeTraits\IsBaseOf.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\TypeTraits</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\TypeTraits\IsChar.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\TypeTraits</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\TypeTraits\IsConst.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\TypeTraits</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\TypeTraits\IsFloatingPoint.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\TypeTraits</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\TypeTraits\IsIntegral.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\TypeTraits</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\TypeTraits\IsSame.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\TypeTraits</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\TypeTraits\IsSignedIntegral.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\TypeTraits</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\TypeTraits\IsUnsignedIntegral.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\TypeTraits</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\TypeTraits\IsVariant.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\TypeTraits</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\TypeTraits\RemoveConst.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\TypeTraits</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\src\ArduinoJson\TypeTraits\RemoveReference.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\src\ArduinoJson\TypeTraits</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ArduinoJson\third-party\catch\catch.hpp">
+      <Filter>Header Files\_micro-api\libraries\ArduinoJson\third-party\catch</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\espsoftwareserial-master\SoftwareSerial.h">
+      <Filter>Header Files\_micro-api\libraries\espsoftwareserial-master</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\Modbus\Modbus.h">
+      <Filter>Header Files\_micro-api\libraries\Modbus</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\ModbusSerial\ModbusSerial.h">
+      <Filter>Header Files\_micro-api\libraries\ModbusSerial</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\nextion\doxygen.h">
+      <Filter>Header Files\_micro-api\libraries\nextion</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\nextion\NexButton.h">
+      <Filter>Header Files\_micro-api\libraries\nextion</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\nextion\NexCheckbox.h">
+      <Filter>Header Files\_micro-api\libraries\nextion</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\nextion\NexConfig.h">
+      <Filter>Header Files\_micro-api\libraries\nextion</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\nextion\NexCrop.h">
+      <Filter>Header Files\_micro-api\libraries\nextion</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\nextion\NexDualStateButton.h">
+      <Filter>Header Files\_micro-api\libraries\nextion</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\nextion\NexGauge.h">
+      <Filter>Header Files\_micro-api\libraries\nextion</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\nextion\NexGpio.h">
+      <Filter>Header Files\_micro-api\libraries\nextion</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\nextion\NexHardware.h">
+      <Filter>Header Files\_micro-api\libraries\nextion</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\nextion\NexHotspot.h">
+      <Filter>Header Files\_micro-api\libraries\nextion</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\nextion\NexNumber.h">
+      <Filter>Header Files\_micro-api\libraries\nextion</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\nextion\NexObject.h">
+      <Filter>Header Files\_micro-api\libraries\nextion</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\nextion\NexPage.h">
+      <Filter>Header Files\_micro-api\libraries\nextion</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\nextion\NexPicture.h">
+      <Filter>Header Files\_micro-api\libraries\nextion</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\nextion\NexProgressBar.h">
+      <Filter>Header Files\_micro-api\libraries\nextion</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\nextion\NexRadio.h">
+      <Filter>Header Files\_micro-api\libraries\nextion</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\nextion\NexRtc.h">
+      <Filter>Header Files\_micro-api\libraries\nextion</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\nextion\NexScrolltext.h">
+      <Filter>Header Files\_micro-api\libraries\nextion</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\nextion\NexSlider.h">
+      <Filter>Header Files\_micro-api\libraries\nextion</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\nextion\NexText.h">
+      <Filter>Header Files\_micro-api\libraries\nextion</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\nextion\NexTimer.h">
+      <Filter>Header Files\_micro-api\libraries\nextion</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\nextion\Nextion.h">
+      <Filter>Header Files\_micro-api\libraries\nextion</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\nextion\NexTouch.h">
+      <Filter>Header Files\_micro-api\libraries\nextion</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\nextion\NexVariable.h">
+      <Filter>Header Files\_micro-api\libraries\nextion</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\nextion\NexWaveform.h">
+      <Filter>Header Files\_micro-api\libraries\nextion</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\PJON.h">
+      <Filter>Header Files\_micro-api\libraries\PJON</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\PJONDefines.h">
+      <Filter>Header Files\_micro-api\libraries\PJON</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\PJONDynamicRouter.h">
+      <Filter>Header Files\_micro-api\libraries\PJON</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\PJONInteractiveRouter.h">
+      <Filter>Header Files\_micro-api\libraries\PJON</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\PJONMaster.h">
+      <Filter>Header Files\_micro-api\libraries\PJON</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\PJONRouter.h">
+      <Filter>Header Files\_micro-api\libraries\PJON</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\PJONSimpleSwitch.h">
+      <Filter>Header Files\_micro-api\libraries\PJON</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\PJONSlave.h">
+      <Filter>Header Files\_micro-api\libraries\PJON</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\PJONSwitch.h">
+      <Filter>Header Files\_micro-api\libraries\PJON</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\interfaces\PJON_Interfaces.h">
+      <Filter>Header Files\_micro-api\libraries\PJON\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\interfaces\ARDUINO\PJON_ARDUINO_Interface.h">
+      <Filter>Header Files\_micro-api\libraries\PJON\interfaces\ARDUINO</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\interfaces\ARDUINO\PJON_IO.h">
+      <Filter>Header Files\_micro-api\libraries\PJON\interfaces\ARDUINO</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\interfaces\ARDUINO\TCPHelper_ARDUINO.h">
+      <Filter>Header Files\_micro-api\libraries\PJON\interfaces\ARDUINO</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\interfaces\ARDUINO\UDPHelper_ARDUINO.h">
+      <Filter>Header Files\_micro-api\libraries\PJON\interfaces\ARDUINO</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\interfaces\LINUX\PJON_LINUX_Interface.h">
+      <Filter>Header Files\_micro-api\libraries\PJON\interfaces\LINUX</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\interfaces\LINUX\TCPHelper_POSIX.h">
+      <Filter>Header Files\_micro-api\libraries\PJON\interfaces\LINUX</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\interfaces\LINUX\UDPHelper_POSIX.h">
+      <Filter>Header Files\_micro-api\libraries\PJON\interfaces\LINUX</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\interfaces\RPI\PJON_RPI_Interface.h">
+      <Filter>Header Files\_micro-api\libraries\PJON\interfaces\RPI</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\interfaces\WINX86\PJON_WINX86_Interface.h">
+      <Filter>Header Files\_micro-api\libraries\PJON\interfaces\WINX86</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\interfaces\WINX86\Serial\Serial.h">
+      <Filter>Header Files\_micro-api\libraries\PJON\interfaces\WINX86\Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\strategies\PJON_Strategies.h">
+      <Filter>Header Files\_micro-api\libraries\PJON\strategies</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\strategies\AnalogSampling\AnalogSampling.h">
+      <Filter>Header Files\_micro-api\libraries\PJON\strategies\AnalogSampling</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\strategies\AnalogSampling\Timing.h">
+      <Filter>Header Files\_micro-api\libraries\PJON\strategies\AnalogSampling</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\strategies\Any\Any.h">
+      <Filter>Header Files\_micro-api\libraries\PJON\strategies\Any</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\strategies\Any\StrategyLink.h">
+      <Filter>Header Files\_micro-api\libraries\PJON\strategies\Any</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\strategies\Any\StrategyLinkBase.h">
+      <Filter>Header Files\_micro-api\libraries\PJON\strategies\Any</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\strategies\EthernetTCP\EthernetLink.h">
+      <Filter>Header Files\_micro-api\libraries\PJON\strategies\EthernetTCP</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\strategies\EthernetTCP\EthernetTCP.h">
+      <Filter>Header Files\_micro-api\libraries\PJON\strategies\EthernetTCP</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\strategies\GlobalUDP\GlobalUDP.h">
+      <Filter>Header Files\_micro-api\libraries\PJON\strategies\GlobalUDP</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\strategies\LocalUDP\LocalUDP.h">
+      <Filter>Header Files\_micro-api\libraries\PJON\strategies\LocalUDP</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\strategies\OverSampling\OverSampling.h">
+      <Filter>Header Files\_micro-api\libraries\PJON\strategies\OverSampling</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\strategies\OverSampling\Timing.h">
+      <Filter>Header Files\_micro-api\libraries\PJON\strategies\OverSampling</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\strategies\SoftwareBitBang\SoftwareBitBang.h">
+      <Filter>Header Files\_micro-api\libraries\PJON\strategies\SoftwareBitBang</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\strategies\SoftwareBitBang\Timing.h">
+      <Filter>Header Files\_micro-api\libraries\PJON\strategies\SoftwareBitBang</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\strategies\ThroughLoRa\ThroughLora.h">
+      <Filter>Header Files\_micro-api\libraries\PJON\strategies\ThroughLoRa</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\strategies\ThroughLoRa\Timing.h">
+      <Filter>Header Files\_micro-api\libraries\PJON\strategies\ThroughLoRa</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\strategies\ThroughSerial\ThroughSerial.h">
+      <Filter>Header Files\_micro-api\libraries\PJON\strategies\ThroughSerial</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\strategies\ThroughSerial\Timing.h">
+      <Filter>Header Files\_micro-api\libraries\PJON\strategies\ThroughSerial</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\utils\crc\PJON_CRC32.h">
+      <Filter>Header Files\_micro-api\libraries\PJON\utils\crc</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\PJON\utils\crc\PJON_CRC8.h">
+      <Filter>Header Files\_micro-api\libraries\PJON\utils\crc</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\Time-master\TimeLib.h">
+      <Filter>Header Files\_micro-api\libraries\Time-master</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\TinyGPSPlus\src\TinyGPS++.h">
+      <Filter>Header Files\_micro-api\libraries\TinyGPSPlus\src</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\utils\ArduinoTrace.h">
+      <Filter>Header Files\_micro-api\libraries\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\utils\visit_struct.hpp">
+      <Filter>Header Files\_micro-api\libraries\utils</Filter>
+    </ClInclude>
+    <ClCompile Include="_micro-api\libraries\FS\src\FS.cpp">
+      <Filter>Source Files\_micro-api\libraries\FS\src</Filter>
+    </ClCompile>
+    <ClCompile Include="_micro-api\libraries\FS\src\vfs_api.cpp">
+      <Filter>Source Files\_micro-api\libraries\FS\src</Filter>
+    </ClCompile>
+    <ClInclude Include="_micro-api\libraries\FS\src\FS.h">
+      <Filter>Header Files\_micro-api\libraries\FS\src</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\FS\src\FSImpl.h">
+      <Filter>Header Files\_micro-api\libraries\FS\src</Filter>
+    </ClInclude>
+    <ClInclude Include="_micro-api\libraries\FS\src\vfs_api.h">
+      <Filter>Header Files\_micro-api\libraries\FS\src</Filter>
+    </ClInclude>
+    <ClCompile Include="_micro-api\libraries\SPIFFS\src\SPIFFS.cpp">
+      <Filter>Source Files\_micro-api\libraries\SPIFFS\src</Filter>
+    </ClCompile>
+    <ClInclude Include="_micro-api\libraries\SPIFFS\src\SPIFFS.h">
+      <Filter>Header Files\_micro-api\libraries\SPIFFS\src</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
