@@ -103,6 +103,11 @@ private:
 public:
 	bool _enabled = false;
 
+	//RTOS Options - Optional
+	bool RTOS_ENABLE = true;
+	uint16_t RTOS_updateTime = 100;
+	uint16_t RTOS_priority = 1;
+
 	NexTouch *_hmiEvents[2] =
 	{
 		&ToggleRadio,

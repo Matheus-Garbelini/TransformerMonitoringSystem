@@ -59,6 +59,12 @@ private:
 	}
 
 public:
+	//RTOS Options - Optional
+	bool RTOS_ENABLE = true;
+	uint16_t RTOS_updateTime = 5;
+	uint16_t RTOS_priority = 2;
+
+	// --------------------------
 	bool valid = false;
 	double latitude = 0.0;
 	double longitude = 0.0;
@@ -67,7 +73,7 @@ public:
 	{
 	}
 
-	void begin()
+	void init()
 	{
 		// ------------- Start RTC Clock and Calibration --------------
 		rtc_clk_32k_bootstrap(512);
@@ -126,7 +132,7 @@ public:
 					if (_GPS.date.year() > 2000)
 					{
 						_syncTime = makeTime(tm);
-						//setTime(_syncTime);
+
 						valid = true;
 					}
 				}
@@ -142,16 +148,16 @@ public:
 	void update()
 	{
 		static uint32_t time = millis();
-		if (_serialGPS.available())
+
+		if (!HMI._enabled)
 		{
-			if (!HMI._enabled)
+			while (_serialGPS.available())
 			{
 				if (_nmeaMode)
 				{
 					Serial.write(_serialGPS.read());
 				}
-				else if (_GPS.encode(_serialGPS.read()))
-				{
+				else if (_GPS.encode(_serialGPS.read())) {
 					syncGPS();
 					if (_debugGPS)
 					{

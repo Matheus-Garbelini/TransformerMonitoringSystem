@@ -103,10 +103,10 @@ private:
 public:
 	PARAMS Params;
 
-	ConfigFileManager(/* args */)
-	{
-	};
-	// Functions
+	//RTOS Options - Optional
+	bool RTOS_ENABLE = false;
+	uint16_t RTOS_updateTime = 1000;
+	uint16_t RTOS_priority = 2;
 
 	void load()
 	{

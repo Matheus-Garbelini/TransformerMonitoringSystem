@@ -287,6 +287,10 @@ private:
 	}
 
 public:
+	//RTOS Options - Optional
+	bool RTOS_ENABLE = true;
+	uint16_t RTOS_updateTime = 20;
+	uint16_t RTOS_priority = 2;
 	// Radio parameters with it's default values
 	int freq = LORA_FREQ;
 	float tx = 20.0;

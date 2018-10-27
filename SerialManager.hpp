@@ -33,6 +33,11 @@ private:
 	bool _enabledRS485 = true;
 
 public:
+	//RTOS Options - Optional
+	bool RTOS_ENABLE = true;
+	uint16_t RTOS_updateTime = 5;
+	uint16_t RTOS_priority = 3;
+
 	// ----------- Getters / Setters ------------
 
 	void setRS485Enabled(bool value)
