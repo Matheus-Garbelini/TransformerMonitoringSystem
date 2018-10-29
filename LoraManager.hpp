@@ -54,12 +54,12 @@ private:
 	static void receiver_function(uint8_t *payload, uint16_t length, const PJON_Packet_Info &packet_info)
 	{
 		LoraManager &loraManager = (LoraManager &)packet_info.custom_pointer;
-		// for (uint8_t i = 0; i < length; i++)
-		// {
-		//     Serial.print(payload[i], HEX);
-		//     Serial.write(' ');
-		// }
-		// Serial.println();
+		for (uint8_t i = 0; i < length; i++)
+		{
+			Serial.print(payload[i], HEX);
+			Serial.write(' ');
+		}
+		Serial.println();
 		if (loraManager.connected)
 		{
 			StaticJsonBuffer<1024> jsonBuffer;
@@ -67,7 +67,7 @@ private:
 			char message[128];
 			uint16_t queryID = 0;
 			const char *interestName;
-			loraManager.RSSI = abs((int16_t)Radio.strategy.packetRssi(true));
+			loraManager.RSSI = abs((int16_t)LoRa.packetRssi());
 			loraManager.SNR = Radio.strategy.packetSnr();
 
 			if (root.success())
@@ -354,7 +354,7 @@ public:
 			return false;
 		Radio.set_custom_pointer(this);
 		Radio.set_receiver(receiver_function);
-		Radio.set_synchronous_acknowledge(false); // Enable Unicast ACK
+		Radio.set_synchronous_acknowledge(true); //
 		QueryManager.begin(Radio);
 
 		pinMode(34, INPUT_PULLDOWN);
@@ -370,27 +370,29 @@ public:
 
 	void update()
 	{
-		static uint8_t acquired = Radio.device_id();
+		static uint8_t acquired = PJON_NOT_ASSIGNED;
 		static uint32_t disconnectedTimeout = 0;
 
 		if (_protocolEnabled) // Pjon protocol handler
 		{
-			Radio.receive();
 			Radio.update();
+			Radio.receive();
+
 			QueryManager.update();
 
 			if (!connected)
 			{
 				if (millis() - disconnectedTimeout > 5000)
 				{
-					//Serial.println("Retrying connection...");
-					//delay(PJON_RANDOM(1000));
-					//Radio.acquire_id_master_slave();
+					Serial.println("Retrying connection...");
+					delay(PJON_RANDOM(1000));
+					connected = Radio.acquire_id_master_slave();
+					Serial.println("Finished");
 					disconnectedTimeout = millis();
 				}
 			}
 
-			if ((Radio.device_id() != acquired && Radio.device_id() != 255))
+			if ((Radio.device_id() && Radio.device_id() != 255))
 			{
 				acquired = Radio.device_id();
 				connected = 1;

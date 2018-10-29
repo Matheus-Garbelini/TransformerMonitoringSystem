@@ -59,6 +59,7 @@ public:
 			}
 			if (root.containsKey("loraprotocol"))
 			{
+				Serial.println("LoRa protocol enabled");
 				bool value = root["loraprotocol"];
 				Lora.setProtocolEnabled(value);
 				LoRa.receive();

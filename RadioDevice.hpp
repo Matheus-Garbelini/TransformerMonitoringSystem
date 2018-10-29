@@ -8,10 +8,10 @@
 template <typename Strategy>
 class BoardRadioNode : public PJONSlave<Strategy>
 {
-  private:
+private:
 	bool _radioEnabled = false;
 
-  public:
+public:
 	BoardRadioNode(uint8_t PjonId = PJON_NOT_ASSIGNED) : PJONSlave<Strategy>(PjonId)
 	{
 	}
@@ -29,7 +29,9 @@ class BoardRadioNode : public PJONSlave<Strategy>
 		{
 			PJONSlave<Strategy>::strategy.setSignalBandwidth(250E3);
 			PJONSlave<Strategy>::strategy.setSpreadingFactor(7);
-			//PJONSlave<Strategy>::begin();
+			PJONSlave<Strategy>::begin();
+			Serial.println(PJONSlave<Strategy>::device_id());
+			//PJONSlave<Strategy>::set_error(error_handler);
 		}
 
 		return init;

@@ -49,7 +49,8 @@
 #define delay_us delayMicroseconds
 
 // --------- Global Classes --------
-BoardRadioNode<ThroughLora> Radio;
+uint8_t radioId[4] = { 0, 0, 0, 1 };
+BoardRadioNode<ThroughLora> Radio(radioId, 255);
 QueryManagerClass QueryManager;
 GPSManager GPS;
 HMIManager HMI;
@@ -204,73 +205,9 @@ void setup()
 	visit_struct::for_each(MainTasks, TaskInitializer{});
 
 	visit_struct::for_each(MainTasks, CreateTaskUpdater{});
-
-	/*
-		xTaskCreate([](void *p) {
-			TickType_t time = xTaskGetTickCount();
-			while (true)
-			{
-				GPS.update();
-				vTaskDelayUntil(&time, pdMS_TO_TICKS(10));
-			}
-		}, "GPSManager", 10000, NULL, 2, NULL);
-
-		xTaskCreate([](void *p) {
-			TickType_t time = xTaskGetTickCount();
-			while (true)
-			{
-				SerialManager.update();
-				vTaskDelayUntil(&time, pdMS_TO_TICKS(5));
-			}
-		}, "SerialManager", 10000, NULL, 3, NULL);
-
-		xTaskCreate([](void *p) {
-			TickType_t time = xTaskGetTickCount();
-			while (true)
-			{
-				HMI.update();
-				vTaskDelayUntil(&time, pdMS_TO_TICKS(10));
-			}
-		}, "HMIManager", 10000, NULL, 2, NULL);
-
-		xTaskCreate([](void *p) {
-			TickType_t time = xTaskGetTickCount();
-			while (true)
-			{
-				Lora.update();
-				vTaskDelayUntil(&time, pdMS_TO_TICKS(20));
-			}
-		}, "LoRaManager", 10000, NULL, 2, NULL);
-
-		xTaskCreate([](void *p) {
-			TickType_t time = xTaskGetTickCount();
-			while (true)
-			{
-				Measurements.update();
-				vTaskDelayUntil(&time, pdMS_TO_TICKS(5));
-			}
-		}, "Measurements", 10000, NULL, 4, NULL);*/
 }
 
 void loop()
 {
-	/*static uint32_t time = 0;
-
-	if (millis() - time > 1000) {
-		time = millis();
-
-		uint32_t times = now();
-
-		printf("%.2d/%.2d/%d\n", day(times), month(times), year(times));
-
-		printf("%.2d:%.2d:%.2d\n", hour(times), minute(times), second(times));
-	}*/
-
-	//GPS.update();
-	//SerialManager.update();
-	/*HMI.update();
-	Lora.update();
-	Measurements.update();*/
-
 	vTaskDelete(NULL);
 }
