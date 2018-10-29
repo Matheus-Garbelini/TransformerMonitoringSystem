@@ -3,24 +3,6 @@
 #include <inttypes.h>
 #include <Arduino.h>
 #include <SPI.h>
-#include <HardwareSerial.h>
-#include <esp32-hal.h>
-#include <stdio.h>
-#include <TimeLib.h>
-#include <visit_struct.hpp>
-
-// User libraries
-#include "RadioDevice.hpp"
-#include "QueryManager.hpp"
-#include "GPSManager.hpp"
-#include "HMIManager.hpp"
-#include "JSONParser.hpp"
-#include "LinuxDevice.hpp"
-#include "RS485Device.hpp"
-#include "LoraManager.hpp"
-#include "MeasurementsManager.hpp"
-#include "ConfigFileManager.hpp"
-#include "SerialManager.hpp"
 
 // Definitions
 #define LED_PIN 2
@@ -48,166 +30,178 @@
 
 #define delay_us delayMicroseconds
 
-// --------- Global Classes --------
-uint8_t radioId[4] = { 0, 0, 0, 1 };
-BoardRadioNode<ThroughLora> Radio(radioId, 255);
-QueryManagerClass QueryManager;
-GPSManager GPS;
-HMIManager HMI;
-
-JSONHandler JSONManager;
-LinuxManager Linux;
-RS485Manager RS485;
-SerialHandler SerialManager;
-LoraManager Lora;
-MeasurementsManager Measurements;
-ConfigFileManager Config;
-// ----------------------------
+#define HFconst	0xA0   //¸ßÆµÊä³ö²ÎÊý
+#define UADC	0xBF   //µçÑ¹Í¨µÀÔöÒæ
+#define UgainA	0x9B
+#define UgainB	0x9C
+#define UgainC	0x9D
 
 SPIClass *Spi = NULL;
+//
+//uint32_t SPI_ATT_Read(uint8_t data)
+//{
+//	uint8_t i;
+//	uint32_t temp = 0;
+//	Set_CS;
+//	Clr_SCL;
+//	delayMicroseconds(50);
+//	Clr_CS;
+//	for (i = 0; i < 8; i++)
+//	{
+//		Set_SCL;
+//		delay_us(50);
+//		if (data & 0x80)
+//			Set_DATA;
+//		else
+//			Clr_DATA;
+//		delay_us(50);
+//		Clr_SCL;
+//		delay_us(50);
+//		data <<= 1;
+//	}
+//	delay_us(50);
+//	for (i = 0; i < 24; i++)
+//	{
+//		temp <<= 1;
+//		Set_SCL;
+//		delay_us(50);
+//		if (Rd_MISO)
+//			temp |= 0x01;
+//		Clr_SCL;
+//		delay_us(50);
+//	}
+//	Set_CS;
+//	return (temp);
+//}
+//
+//void SPI_ATT_Write(uint8_t com_add, uint32_t data2)
+//{
+//	uint8_t i, data1;
+//	data1 = 0x80 | com_add;
+//	Set_CS;
+//	Clr_SCL;
+//	Clr_CS;
+//	for (i = 0; i < 8; i++)
+//	{
+//		Set_SCL;
+//		delay_us(50);
+//		if (data1 & 0x80)
+//			Set_DATA;
+//		else
+//			Clr_DATA;
+//		delay_us(3);
+//		Clr_SCL;
+//		delay_us(50);
+//		data1 <<= 1;
+//	}
+//	for (i = 0; i < 24; i++)
+//	{
+//		Set_SCL;
+//		delay_us(50);
+//		if (data2 & 0x00800000)
+//			Set_DATA;
+//		else
+//			Clr_DATA;
+//		delay_us(3);
+//		Clr_SCL;
+//		delay_us(50);
+//
+//		data2 <<= 1;
+//	}
+//	Set_CS;
+//}
 
-uint32_t SPI_ATT_Read(uint8_t data)
+void ATT_Adjust(void)
 {
-	uint8_t i;
-	uint32_t temp = 0;
-	Set_CS;
-	Clr_SCL;
-	Clr_CS;
-	for (i = 0; i < 8; i++)
-	{
-		Set_SCL;
-		delay_us(50);
-		if (data & 0x80)
-			Set_DATA;
-		else
-			Clr_DATA;
-		delay_us(3);
-		Clr_SCL;
-		delay_us(50);
-		data <<= 1;
-	}
-	delay_us(3);
-	for (i = 0; i < 24; i++)
-	{
-		temp <<= 1;
-		Set_SCL;
-		delay_us(50);
-		if (Rd_MISO)
-			temp |= 0x01;
-		Clr_SCL;
-		delay_us(50);
-	}
-	Set_CS;
-	return (temp);
+	uint32_t read1 = 0x55;
+
+	SPI_ATT_Write(0xC3, 0x000000);
+	delay(200);
+	SPI_ATT_Write(0xC9, 0x00005A);
+
+	SPI_ATT_Write(0x01, 0xB9FE);
+	SPI_ATT_Write(0x03, 0xF804);
+	SPI_ATT_Write(0x31, 0x3437);
+	SPI_ATT_Write(0x02, 0x0000);
+
+	SPI_ATT_Write(0x6D, 0xFF00);
+	SPI_ATT_Write(0x6E, 0x0DB8);
+	SPI_ATT_Write(0x6F, 0xD1DA);
+
+	SPI_ATT_Write(UADC, 0x000001);
+	SPI_ATT_Write(HFconst, 0x0005E7);
+	///*----------------------------------------
+	//
+	//-----------------------------------------*/
+	SPI_ATT_Write(UgainA, 0x000000);
+	SPI_ATT_Write(UgainB, 0x000000);
+	SPI_ATT_Write(UgainC, 0x8172F5);	//8483573
+
+	SPI_ATT_Write(0xC9, 0x000000);
+
+	SPI_ATT_Write(0xC6, 0x00005A);
+	read1 = SPI_ATT_Read(0x00);
+	printf("\r\nIn 0xC6 with 0x5A: 0x00 is %x !\r\n", read1);
+	read1 = 0x55;
+
+	read1 = SPI_ATT_Read(0x01);
+	printf("\r\nModeCfg is %x !\r\n", read1);
+	read1 = 0x55;
+
+	read1 = SPI_ATT_Read(0x03);
+	printf("\r\nEMUCfg is %x !\r\n", read1);
+	read1 = 0x55;
+
+	read1 = SPI_ATT_Read(0x31);
+	printf("\r\nModuleCfg is %x !\r\n", read1);
+	read1 = 0x55;
+
+	SPI_ATT_Write(0xC6, 0x000000);		//¼ÆÁ¿Êý¾Ý¶Á³öÊ¹ÄÜ
+	read1 = SPI_ATT_Read(0x00);
+	printf("\r\nIn 0xC6 without 0x5A: 0x00 is %x !\r\n", read1);
+	read1 = SPI_ATT_Read(0x38);
+	printf("\r\n%x !\r\n", read1);
 }
-
-void SPI_ATT_Write(uint8_t com_add, uint32_t data2)
-{
-	uint8_t i, data1;
-	data1 = 0x80 | com_add;
-	Set_CS;
-	Clr_SCL;
-	Clr_CS;
-	for (i = 0; i < 8; i++)
-	{
-		Set_SCL;
-		delay_us(50);
-		if (data1 & 0x80)
-			Set_DATA;
-		else
-			Clr_DATA;
-		delay_us(3);
-		Clr_SCL;
-		delay_us(50);
-		data1 <<= 1;
-	}
-	for (i = 0; i < 24; i++)
-	{
-		Set_SCL;
-		delay_us(50);
-		if (data2 & 0x00800000)
-			Set_DATA;
-		else
-			Clr_DATA;
-		delay_us(3);
-		Clr_SCL;
-		delay_us(50);
-
-		data2 <<= 1;
-	}
-	Set_CS;
-}
-
-struct MAIN_TASKS {
-	SerialHandler *SerialTask = &SerialManager;
-	ConfigFileManager *ConfigTask = &Config;
-	GPSManager *GPSTask = &GPS;
-	HMIManager *HMITask = &HMI;
-	LoraManager *LoraTask = &Lora;
-	MeasurementsManager *MeasureTask = &Measurements;
-} MainTasks;
-
-VISITABLE_STRUCT(MAIN_TASKS,
-	SerialTask,
-	ConfigTask,
-	GPSTask,
-	HMITask,
-	LoraTask,
-	MeasureTask);
-
-struct TaskInitializer {
-	template <typename T>
-	void operator()(const char * name, T &value) {
-		value->init();
-	}
-};
-
-struct CreateTaskUpdater {
-	template <typename T>
-	void operator()(const char * name, T &value) {
-		static T _taskObject;
-		_taskObject = value;
-		if (value->RTOS_ENABLE) {
-			xTaskCreate([&](void *p) {
-				T rtosObject = _taskObject;
-				TickType_t time = xTaskGetTickCount();
-				while (true)
-				{
-					rtosObject->update();
-					vTaskDelayUntil(&time, pdMS_TO_TICKS(rtosObject->RTOS_updateTime));
-				}
-			}, name, 10000, NULL, value->RTOS_priority, NULL);
-		}
-	}
-};
 
 void setup()
 {
-	/*SerialManager.init();
-	Config.init();
-	GPS.init();
-	HMI.init();
-	Lora.init();
-	Measurements.init();*/
+	Serial.begin(115200);
 
-	/*SetOutput(23);
-	digitalWrite(23, HIGH);
-	SetInput(DIN_PIN);
-	SetOutput(CS_PIN);
-	SetOutput(CLK_PIN);
-	SetOutput(DATA_PIN);
-	Clr_SCL;
-	Clr_CS;
-	delay_us(30);
+	// TODO: att7022 tests here
+
+	Spi = new SPIClass(HSPI);
+	Spi->begin(CLK_PIN, DIN_PIN, DATA_PIN, CS_PIN);
+	Spi->setHwCs(false);
+	Spi->setFrequency(10000);
+	Spi->setBitOrder(MSBFIRST);
+	Spi->setDataMode(SPI_MODE0);
+	pinMode(CS_PIN, OUTPUT);
+	pinMode(23, OUTPUT);
 	Set_CS;
-	delay_us(600);*/
+	digitalWrite(23, HIGH);
+};
 
-	visit_struct::for_each(MainTasks, TaskInitializer{});
+void SPI_ATT_Write(uint8_t com_add, uint32_t data2) {
+	Clr_CS;
+	Spi->write(com_add);
+	delayMicroseconds(50);
+	Spi->transferBits(data2, NULL, 24);
+	Set_CS;
+}
 
-	visit_struct::for_each(MainTasks, CreateTaskUpdater{});
+uint32_t SPI_ATT_Read(uint8_t data) {
+	Clr_CS;
+	delayMicroseconds(1);
+	Spi->write(data);
+	delayMicroseconds(50);
+	uint32_t ret = 0;
+	Spi->transferBits(0, &ret, 24);
+	Set_CS;
+	return ret;
 }
 
 void loop()
 {
-	vTaskDelete(NULL);
+	ATT_Adjust();
+	delay(2000);
 }
