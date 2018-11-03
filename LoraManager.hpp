@@ -14,7 +14,7 @@ class LoraManager
 {
 private:
 	bool _protocolEnabled = false;
-	bool _redirLora = true;
+	bool _redirLora = false;
 	uint8_t radioId[4] = { 0, 0, 0, 1 };
 	uint8_t connected = 0;
 	String NodeName = "pucpr/bloco8"; // CCN node name
@@ -345,13 +345,22 @@ public:
 		_protocolEnabled = value;
 	}
 
+	void setSPI(SPIClass *spi) {
+		Radio.setSPI(spi);
+		Serial.println("SPI Assigned");
+	}
+
 	bool init()
 	{
 		bool ret;
 
 		ret = Radio.begin();
 		if (!ret)
+		{
+			Serial.println("Lora failed");
 			return false;
+		}
+
 		Radio.set_custom_pointer(this);
 		Radio.set_receiver(receiver_function);
 		Radio.set_synchronous_acknowledge(true); //

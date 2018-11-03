@@ -38,6 +38,9 @@ MeasurementsManager Measurements;
 ConfigFileManager Config;
 // ----------------------------
 
+// -------- Instaces ----------
+SPIClass *SpiHardware;
+
 struct MAIN_TASKS {
 	SerialHandler *SerialTask = &SerialManager;
 	ConfigFileManager *ConfigTask = &Config;
@@ -83,6 +86,11 @@ struct CreateTaskUpdater {
 
 void setup()
 {
+	SpiHardware = new SPIClass(HSPI);
+
+	Lora.setSPI(SpiHardware);
+	SpiHardware->begin();
+
 	visit_struct::for_each(MainTasks, TaskInitializer{});
 
 	visit_struct::for_each(MainTasks, CreateTaskUpdater{});

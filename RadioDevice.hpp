@@ -20,6 +20,10 @@ public:
 	{
 	}
 
+	inline void setSPI(SPIClass *spi) {
+		PJONSlave<Strategy>::strategy.setSPI(spi);
+	}
+
 	inline bool begin()
 	{
 		PJONSlave<Strategy>::strategy.setPins(23, 25, 34);
@@ -29,7 +33,7 @@ public:
 		{
 			PJONSlave<Strategy>::strategy.setSignalBandwidth(250E3);
 			PJONSlave<Strategy>::strategy.setSpreadingFactor(7);
-			PJONSlave<Strategy>::begin();
+			//PJONSlave<Strategy>::begin();
 			Serial.println(PJONSlave<Strategy>::device_id());
 			//PJONSlave<Strategy>::set_error(error_handler);
 		}
