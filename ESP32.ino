@@ -55,7 +55,7 @@ VISITABLE_STRUCT(MAIN_TASKS,
 	ConfigTask,
 	GPSTask,
 	HMITask,
-	LoraTask,
+	//LoraTask,
 	MeasureTask);
 
 struct TaskInitializer {
@@ -88,15 +88,18 @@ void setup()
 {
 	SpiHardware = new SPIClass(HSPI);
 
-	Lora.setSPI(SpiHardware);
+	//Lora.setSPI(SpiHardware);
+	Measurements.setSPI(SpiHardware);
 	SpiHardware->begin();
 
 	visit_struct::for_each(MainTasks, TaskInitializer{});
 
-	visit_struct::for_each(MainTasks, CreateTaskUpdater{});
+	//visit_struct::for_each(MainTasks, CreateTaskUpdater{});
 }
 
 void loop()
 {
-	vTaskDelete(NULL);
+	//vTaskDelete(NULL);
+	Measurements.update();
+	delay(1000);
 }

@@ -6,6 +6,7 @@
 #include <TimeLib.h>
 #include <visit_struct.hpp>
 #include "LinuxDevice.hpp"
+#include "ATT7022EU.hpp"
 
 #define WAIT_FOR_GPS 1
 
@@ -45,6 +46,7 @@ class MeasurementsManager
 {
 private:
 	StaticJsonBuffer<512> jsonBuffer;
+	ATT7022EU EnergyIC;
 
 	void updateMeasurements()
 	{
@@ -64,6 +66,8 @@ private:
 		GridMeasurements.realPower1 = realPowerRandom + (float)(random(100) - 5) / 10.0;
 		GridMeasurements.realPower2 = realPowerRandom + (float)(random(100) - 5) / 10.0;
 		GridMeasurements.realPower3 = realPowerRandom + (float)(random(100) - 5) / 10.0;
+
+		EnergyIC.update();
 	}
 
 	void encodeJSON(JsonObject &root)
@@ -103,8 +107,11 @@ public:
 
 	bool init()
 	{
-		// TODO: Initialize att7022eu
-		return true;
+		return EnergyIC.init();
+	}
+
+	void setSPI(SPIClass *spi) {
+		EnergyIC.setSpi(spi);
 	}
 
 	void update()

@@ -1650,5 +1650,8 @@
     <ClInclude Include="_micro-api\libraries\SPIFFS\src\SPIFFS.h">
       <Filter>Header Files\_micro-api\libraries\SPIFFS\src</Filter>
     </ClInclude>
+    <ClInclude Include="ATT7022EU.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

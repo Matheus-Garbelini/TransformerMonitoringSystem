@@ -107,6 +107,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ATT7022EU.hpp" />
     <ClInclude Include="ConfigFileManager.hpp">
       <FileType>CppCode</FileType>
     </ClInclude>
