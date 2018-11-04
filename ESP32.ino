@@ -55,7 +55,7 @@ VISITABLE_STRUCT(MAIN_TASKS,
 	ConfigTask,
 	GPSTask,
 	HMITask,
-	//LoraTask,
+	LoraTask,
 	MeasureTask);
 
 struct TaskInitializer {
@@ -87,19 +87,20 @@ struct CreateTaskUpdater {
 void setup()
 {
 	SpiHardware = new SPIClass(HSPI);
-
-	//Lora.setSPI(SpiHardware);
-	Measurements.setSPI(SpiHardware);
 	SpiHardware->begin();
 
+	// Configure SPI for Lora and ATT7022EU
+	Lora.setSPI(SpiHardware);
+	Measurements.setSPI(SpiHardware);
+
+	// Initialize all classes
 	visit_struct::for_each(MainTasks, TaskInitializer{});
 
-	//visit_struct::for_each(MainTasks, CreateTaskUpdater{});
+	// Create freeRtos tasks for each class
+	visit_struct::for_each(MainTasks, CreateTaskUpdater{});
 }
 
 void loop()
 {
-	//vTaskDelete(NULL);
-	Measurements.update();
-	delay(1000);
+	vTaskDelete(NULL);
 }

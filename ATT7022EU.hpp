@@ -93,10 +93,7 @@ public:
 		_spiSettings = new SPISettings(100000, MSBFIRST, SPI_MODE1);
 		pinMode(CS_PIN, OUTPUT);
 		Set_CS;
-		/*pinMode(23, OUTPUT);
-		pinMode(25, OUTPUT);
-		digitalWrite(23, HIGH);
-		digitalWrite(25, LOW);*/
+
 		ATT_Adjust();
 
 		return true;
@@ -140,22 +137,24 @@ private:
 	SPISettings *_spiSettings;
 
 	void SPI_ATT_Write(uint8_t com_add, uint32_t data2) {
-		Clr_CS;
 		com_add |= 0x80; // Set write bit
 		data2 |= (uint32_t)com_add << 24;
-		_spi->beginTransaction(*_spiSettings);
-		_spi->transfer32(data2);
-		_spi->endTransaction();
 
+		_spi->beginTransaction(*_spiSettings);
+		Clr_CS;
+		_spi->transfer32(data2);
 		Set_CS;
+		_spi->endTransaction();
 	}
 
 	uint32_t SPI_ATT_Read(uint8_t data) {
+		_spi->beginTransaction(*_spiSettings);
 		Clr_CS;
-		_spi->write(data);
-		uint32_t ret = 0;
-		_spi->transferBits(0, &ret, 24);
+
+		uint32_t ret = _spi->transfer32(((uint32_t)data << 24));
 		Set_CS;
+		_spi->endTransaction();
+
 		return ret;
 	}
 
