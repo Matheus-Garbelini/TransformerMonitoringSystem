@@ -33,6 +33,13 @@ class ATT7022EU
 #define r_IcRms 0x12
 #define r_ItRms 0x13
 
+#define r_UaRmsFundamental 0x48
+#define r_UbRmsFundamental 0x49
+#define r_UcRmsFundamental 0x4A
+#define r_IaRmsFundamental 0x4B
+#define r_IbRmsFundamental 0x4C
+#define r_IcRmsFundamental 0x4D
+
 #define r_Pfa 0x14
 #define r_Pfb 0x15
 #define r_Pfc 0x16
@@ -74,9 +81,6 @@ class ATT7022EU
 #define DATA_PIN 13
 #define DIN_PIN 12
 
-#define SetInput(x) pinMode(x,INPUT)
-#define SetOutput(x) pinMode(x,OUTPUT)
-
 #define Set_CS digitalWrite(CS_PIN,HIGH)
 #define Clr_CS digitalWrite(CS_PIN,LOW)
 
@@ -94,24 +98,47 @@ public:
 		pinMode(CS_PIN, OUTPUT);
 		Set_CS;
 
-		ATT_Adjust();
+		return calibrate();
+	};
 
-		return true;
-	}
+	inline float readFrequency() {
+		return (float)SPI_ATT_Read(r_Freq) / 8192.0;
+	};
 
-	float readRMSVoltage(uint8_t phase = 0) {
+	inline float readRMSVoltage(uint8_t phase = 0) {
 		return (float)SPI_ATT_Read(r_UaRms + phase) / 8192.0;
-	}
+	};
 
-	float readRMSVoltageFundamental(uint8_t phase = 0) {
-		return (float)SPI_ATT_Read(r_UaRms + phase) / 8192.0;
-	}
+	inline float readRMSVoltageFundamental(uint8_t phase = 0) {
+		return (float)SPI_ATT_Read(r_UaRmsFundamental + phase) / 8192.0;
+	};
 
-	float readRMSCurrent(uint8_t phase = 0) {
+	inline float readRMSCurrent(uint8_t phase = 0) {
 		return (float)SPI_ATT_Read(r_IaRms + phase) / 8192.0;
+	};
+
+	inline float readRMSCurrentFundamental(uint8_t phase = 0) {
+		return (float)SPI_ATT_Read(r_IaRmsFundamental + phase) / 8192.0;
+	};
+
+	inline double readTHDVoltage(uint8_t phase = 0) {
+		double Uall = readRMSVoltage(phase);
+		double Ub = readRMSVoltageFundamental(phase);
+		double Uh = sqrt(abs((Uall*Uall) - (Ub*Ub)));
+
+		return (Uh / Ub) * 100.0;
 	}
+
+	inline double readTHDCurrent(uint8_t phase = 0) {
+		double Iall = readRMSCurrent(phase);
+		double Ib = readRMSCurrentFundamental(phase);
+		double Ih = sqrt(abs((Iall*Iall) - (Ib*Ib)));
+
+		return (Ih / Ib) * 100.0;
+	};
 
 	void update() {
+		// For testing only
 		printf("\r\n********************\r\n");
 
 		double Ub = ((double)SPI_ATT_Read(r_UcRms) / 8192.0);
@@ -126,11 +153,11 @@ public:
 
 		printf("\r\n       %f !\r\n", (float)SPI_ATT_Read(r_Freq) / 8192.0);
 		printf("\r\n********************\r\n");
-	}
+	};
 
 	void setSpi(SPIClass *spi) {
 		_spi = spi;
-	}
+	};
 
 private:
 	SPIClass *_spi;
@@ -145,7 +172,7 @@ private:
 		_spi->transfer32(data2);
 		Set_CS;
 		_spi->endTransaction();
-	}
+	};
 
 	uint32_t SPI_ATT_Read(uint8_t data) {
 		_spi->beginTransaction(*_spiSettings);
@@ -156,10 +183,11 @@ private:
 		_spi->endTransaction();
 
 		return ret;
-	}
+	};
 
-	void ATT_Adjust(void)
+	bool calibrate(void)
 	{
+		// TODO: place parameters
 		SPI_ATT_Write(0xC3, 0x000000);
 		SPI_ATT_Write(0xC9, 0x00005A);
 
@@ -193,7 +221,11 @@ private:
 		SPI_ATT_Write(0x19, 0xF0AA);
 
 		SPI_ATT_Write(0xC9, 0x000001);
-	}
+
+		//Verify chip code
+		if (SPI_ATT_Read(0x00) == 0x7122A0) return true;
+		else return false;
+	};
 };
 
 #endif

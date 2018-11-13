@@ -11,32 +11,32 @@
 
 class LinuxManager : public HardwareSerial
 {
-  private:
-    bool _linuxInitialized = false;
-    bool _ethernetConection = false;
-    bool _dongleConnection = false;
+private:
+	bool _linuxInitialized = false;
+	bool _ethernetConection = false;
+	bool _dongleConnection = false;
 
-  public:
-    // LINUX (OrangePiZero)
+public:
+	// LINUX (OrangePiZero)
 
-    LinuxManager() : HardwareSerial(UART_LINUX_NUMBER)
-    {
-    }
+	LinuxManager() : HardwareSerial(UART_LINUX_NUMBER)
+	{
+	}
 
-    void init()
-    {
-        this->begin(SERIAL_DEFAULT_BAUD, SERIAL_8N1, SERIAL_LINUX_RX, SERIAL_LINUX_TX);
-    }
+	void init()
+	{
+		this->begin(SERIAL_DEFAULT_BAUD, SERIAL_8N1, SERIAL_LINUX_RX, SERIAL_LINUX_TX);
+	}
 
-    inline void setInitialized(bool value)
-    {
-        _linuxInitialized = value;
-    }
+	inline void setInitialized(bool value)
+	{
+		_linuxInitialized = value;
+	}
 
-    inline bool getInitialized()
-    {
-        return _linuxInitialized;
-    }
+	inline bool getInitialized()
+	{
+		return _linuxInitialized;
+	}
 };
 
 #endif

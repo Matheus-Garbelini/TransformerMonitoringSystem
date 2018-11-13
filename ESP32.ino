@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <TimeLib.h>
 #include <visit_struct.hpp>
+#include <string>
 
 // User libraries
 #include "RadioDevice.hpp"
@@ -71,7 +72,8 @@ struct CreateTaskUpdater {
 		static T _taskObject;
 		_taskObject = value;
 		if (value->RTOS_ENABLE) {
-			xTaskCreate([&](void *p) {
+			//tskNO_AFFINITY
+			xTaskCreatePinnedToCore([&](void *p) {
 				T rtosObject = _taskObject;
 				TickType_t time = xTaskGetTickCount();
 				while (true)
@@ -79,7 +81,7 @@ struct CreateTaskUpdater {
 					rtosObject->update();
 					vTaskDelayUntil(&time, pdMS_TO_TICKS(rtosObject->RTOS_updateTime));
 				}
-			}, name, 10000, NULL, value->RTOS_priority, NULL);
+			}, name, 10000, NULL, value->RTOS_priority, NULL, tskNO_AFFINITY);
 		}
 	}
 };

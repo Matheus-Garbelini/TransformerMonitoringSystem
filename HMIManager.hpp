@@ -61,7 +61,7 @@ private:
 	{
 		if (Measurements.GridMeasurements.valid)
 		{
-			char text[16];
+			char text[32];
 			sprintf(text, "%.1f", Measurements.GridMeasurements.rmsVoltage1);
 			HMIMeasurements.rmsVoltage1.setText(text);
 			sprintf(text, "%.1f", Measurements.GridMeasurements.rmsVoltage2);

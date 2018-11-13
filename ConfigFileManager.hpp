@@ -164,8 +164,8 @@ public:
 	{
 		const bool ret = SPIFFS.begin(FORMAT_SPIFFS_IF_FAILED);
 		// If file system is mounted
-		/*if (ret)
-			load();*/
+		if (ret)
+			load();
 
 		return ret;
 	}
