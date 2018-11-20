@@ -1,6 +1,6 @@
 #ifndef MEASUREMENTS_MANAGER
 #define MEASUREMENTS_MANAGER
-
+#include <limits>
 #include <Arduino.h>
 #include <ArduinoJson.h>
 #include <TimeLib.h>
@@ -9,7 +9,14 @@
 #include "LinuxDevice.hpp"
 #include "ATT7022EU.hpp"
 
-#define WAIT_FOR_GPS 0
+#define WAIT_FOR_GPS 1
+#define MINUTE_SECONDS (60*1000) // 60 Seconds in milliseconds
+
+// JSON Fields
+#define JSON_CMD "CMD"
+#define JSON_CMD_MEASURE "measure"
+#define JSON_CMD_INTEGRAL "integral"
+#define JSON_CMD_EVENT "event"
 
 // TODO create att7022eu class
 
@@ -18,54 +25,66 @@ struct MEASUREMENTS
 	bool valid = false;
 	uint32_t time = 0;
 
-	float frequency = 60.0;
+	float Frequency = 60.0;
 
-	float rmsVoltage1 = 0;
-	float rmsVoltage2 = 0;
-	float rmsVoltage3 = 0;
+	float V_L1 = 0;
+	float V_L2 = 0;
+	float V_L3 = 0;
 
-	float rmsCurrent1 = 0;
-	float rmsCurrent2 = 0;
-	float rmsCurrent3 = 0;
+	float I_L1 = 0;
+	float I_L2 = 0;
+	float I_L3 = 0;
 
-	float thdVoltage1 = 0.0;
-	float thdVoltage2 = 0.0;
-	float thdVoltage3 = 0.0;
-	float thdCurrent1 = 0.0;
-	float thdCurrent2 = 0.0;
-	float thdCurrent3 = 0.0;
+	float THD_V_L1N = 0.0;
+	float THD_V_L2N = 0.0;
+	float THD_V_L3N = 0.0;
+	float THD_I_L1N = 0.0;
+	float THD_I_L2N = 0.0;
+	float THD_I_L3N = 0.0;
 
 	// TODO: Read real,active and reactive power
-	float realPower1 = 100;
-	float realPower2 = 100;
-	float realPower3 = 100;
+	float W_L1 = 100;
+	float W_L2 = 100;
+	float W_L3 = 100;
 };
 
 VISITABLE_STRUCT(MEASUREMENTS,
-	frequency,
-	rmsVoltage1,
-	rmsVoltage2,
-	rmsVoltage3,
-	rmsCurrent1,
-	rmsCurrent2,
-	rmsCurrent3,
-	thdVoltage1,
-	thdVoltage2,
-	thdVoltage3,
-	thdCurrent1,
-	thdCurrent2,
-	thdCurrent3);
+	Frequency,
+	V_L1,
+	V_L2,
+	V_L3,
+	I_L1,
+	I_L2,
+	I_L3,
+	THD_V_L1N,
+	THD_V_L2N,
+	THD_V_L3N,
+	THD_I_L1N,
+	THD_I_L2N,
+	THD_I_L3N);
 //realPower1,
 //realPower2,
 //realPower3);
 
-typedef struct {
+struct VARIABLE_STRUCTURE {
+	uint32_t timeout;
 	double average;
 	float min;
 	float max;
 	uint32_t samples;
 	uint32_t lastTime;
-} INTEGRAL_STRUCTURE;
+};
+
+struct INTEGRAL_STRUCTURE {
+	VARIABLE_STRUCTURE minutes_1 = { MINUTE_SECONDS };
+	VARIABLE_STRUCTURE minutes_5 = { MINUTE_SECONDS * 5 };
+	VARIABLE_STRUCTURE minutes_15 = { MINUTE_SECONDS * 15 };
+};
+
+VISITABLE_STRUCT(INTEGRAL_STRUCTURE,
+	minutes_1,
+	minutes_5,
+	minutes_15);
 
 class MeasurementsManager
 {
@@ -79,23 +98,25 @@ private:
 		// TODO here, read att7022 measurements
 		GridMeasurements.time = now();
 
-		GridMeasurements.frequency = EnergyIC.readFrequency();
+		GridMeasurements.Frequency = EnergyIC.readFrequency();
 
-		GridMeasurements.rmsVoltage1 = EnergyIC.readRMSVoltage(0);
-		GridMeasurements.rmsVoltage2 = EnergyIC.readRMSVoltage(1);
-		GridMeasurements.rmsVoltage3 = EnergyIC.readRMSVoltage(2);
+		GridMeasurements.V_L1 = EnergyIC.readRMSVoltage(0);
+		GridMeasurements.V_L2 = EnergyIC.readRMSVoltage(1);
+		GridMeasurements.V_L3 = EnergyIC.readRMSVoltage(2);
 
-		GridMeasurements.rmsCurrent1 = EnergyIC.readRMSCurrent(0);
-		GridMeasurements.rmsCurrent2 = EnergyIC.readRMSCurrent(1);
-		GridMeasurements.rmsCurrent3 = EnergyIC.readRMSCurrent(2);
+		GridMeasurements.I_L1 = EnergyIC.readRMSCurrent(0);
+		GridMeasurements.I_L2 = EnergyIC.readRMSCurrent(1);
+		GridMeasurements.I_L3 = EnergyIC.readRMSCurrent(2);
 
-		GridMeasurements.thdVoltage1 = EnergyIC.readTHDVoltage(0);
-		GridMeasurements.thdVoltage2 = EnergyIC.readTHDVoltage(1);
-		GridMeasurements.thdVoltage3 = EnergyIC.readTHDVoltage(2);
-		//Serial.println("------------------");
-		//EnergyIC.update();
-		//updateIntegralData(IntegralData);
-		//Serial.println("------------------");
+		GridMeasurements.THD_V_L1N = EnergyIC.readTHDVoltage(0);
+		GridMeasurements.THD_V_L2N = EnergyIC.readTHDVoltage(1);
+		GridMeasurements.THD_V_L3N = EnergyIC.readTHDVoltage(2);
+
+		GridMeasurements.THD_I_L1N = EnergyIC.readTHDCurrent(0);
+		GridMeasurements.THD_I_L2N = EnergyIC.readTHDCurrent(1);
+		GridMeasurements.THD_I_L3N = EnergyIC.readTHDCurrent(2);
+
+		updateIntegralData(IntegralData);
 	}
 
 	void encodeJSON(JsonObject &root)
@@ -107,22 +128,76 @@ private:
 	}
 
 	void createIntegralData(std::unordered_map<char *, INTEGRAL_STRUCTURE> &data) {
+		uint32_t current_time = millis();
+
 		visit_struct::for_each(GridMeasurements,
-			[&](char *name, auto &value) {
-			data[name] = { 0 };
-			data[name].lastTime = now();
+			[&](char *nameVar, auto &value) {
+			data[nameVar] = {}; // Create empty VARIABLE_STRUCTURE
+			auto &object = data[nameVar];
+
+			visit_struct::for_each(object,
+				[&](char *name, auto &value) {
+				value.lastTime = current_time;
+				value.max = std::numeric_limits<float>::lowest();
+				value.min = std::numeric_limits<float>::max();
+			});
 		});
 	}
 
 	// Function for 1, 5 and 15 minutes integralization
 	void updateIntegralData(std::unordered_map<char *, INTEGRAL_STRUCTURE> &data) {
+		uint32_t current_time = millis();
+
+		uint32_t current_sync_time = now();
+		// Iterate measure variables
+
 		visit_struct::for_each(GridMeasurements,
-			[&](char *name, auto &value) {
-			/*auto &entry = data[name];
-			entry.samples += 1;*/
-			data[name].average = value;
-			//printf("%s: %f\n", name, value);
+			[&](char *nameVar, auto &valueMeas) {
+			auto &object = data[nameVar];
+
+			// Iterate variable integral data for 1, 5 and 15 minutes
+			visit_struct::for_each(object,
+				[&](char *nameMinute, auto &valueObject) {
+				valueObject.samples += 1;
+				valueObject.average += valueMeas;
+
+				if (valueMeas >= valueObject.max) valueObject.max = valueMeas;
+				if (valueMeas <= valueObject.min) valueObject.min = valueMeas;
+
+				if (current_time - valueObject.lastTime >= valueObject.timeout) {
+					valueObject.lastTime = current_time;
+					valueObject.average /= (double)valueObject.samples;
+					//TODO: change now() to millis and decrement 1 second for correct start
+
+					sendIntegralData(nameVar, valueObject, current_sync_time - 60);
+					// Clear integralization data
+					valueObject.samples = 0;
+					valueObject.average = 0;
+					valueObject.max = std::numeric_limits<float>::lowest();
+					valueObject.min = std::numeric_limits<float>::max();
+				}
+			});
 		});
+	}
+
+	static void sendIntegralData(const char * name, VARIABLE_STRUCTURE &variable, uint32_t updateTime) {
+		DynamicJsonBuffer jsonBuffer;
+		JsonObject &root = jsonBuffer.createObject();
+		root[JSON_CMD] = JSON_CMD_INTEGRAL;
+		root["name"] = name;
+		root["average"] = variable.average;
+		root["max"] = variable.max;
+		root["min"] = variable.min;
+		root["period"] = variable.timeout;
+		root["time"] = updateTime;
+
+		// TODO: route to Linux
+		if (Linux.getInitialized()) {
+			root.printTo(Linux);
+			Linux.print("\n");
+		}
+
+		jsonBuffer.clear();
 	}
 
 	void sendToLinux()
@@ -136,11 +211,13 @@ private:
 			// TODO: Move to Serial Manager (2nd thread)
 			JsonObject &root = jsonBuffer.createObject();
 
+			root[JSON_CMD] = JSON_CMD_MEASURE;
+
 			encodeJSON(root);
 
 			root["time"] = GridMeasurements.time;
 			root.printTo(Linux);
-			Linux.write('\n');
+			Linux.print("\n");
 			jsonBuffer.clear();
 		}
 	}
@@ -168,15 +245,15 @@ public:
 	void update()
 	{
 		static uint32_t _time = millis();
-
 		uint32_t currentTime = millis();
+
 		if (currentTime - _time >= 1000) // 1 second
 		{
 			_time = currentTime;
-
-			updateMeasurements();
 			sendToLinux();
 		}
+
+		updateMeasurements();
 	}
 };
 

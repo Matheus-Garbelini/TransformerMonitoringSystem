@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GPSManager" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAGSAAAQAAAAIAAADEIAAAAiAgCAAMAAABCAAgEAAQ=</HashCode>
+      <FileName>GPSManager.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HMIManager" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="HMIManager::__unnamed_struct_0005_1" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>HMIManager.hpp</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAhAAAgAAAAABABIAAEKMAAQkAAABAIQAAAAAC4EAAA=</HashCode>
+      <FileName>HMIManager.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JSONHandler" Collapsed="true">
+    <Position X="8.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>JSONParser.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinuxManager" Collapsed="true">
+    <Position X="10" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAQAAAAAAAAAAAAAAAIAAAAAAIAAEAAQAAAAAE=</HashCode>
+      <FileName>LinuxDevice.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LoraManager" Collapsed="true">
+    <Position X="10.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAACBCEAgAIAgAAgkIAAAAAIIKMAMCAAEAQAiEAgE=</HashCode>
+      <FileName>LoraManager.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QueryManagerClass" Collapsed="true">
+    <Position X="5.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAEAAgAAAAAAAAAUEAAIACEAAAAAAAgGAAA=</HashCode>
+      <FileName>QueryManager.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SerialHandler" Collapsed="true">
+    <Position X="2" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAABYAAAAAAQAAAEYAQAIEAABARIAAAAACAgEQAA=</HashCode>
+      <FileName>SerialManager.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConfigFileManager" Collapsed="true">
+    <Position X="7.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAIAAICAAAAAAAEIACBAAAAAQAIgAAAAAAgEAAA=</HashCode>
+      <FileName>ConfigFileManager.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="PARAMS" Collapsed="true">
+    <Position X="9.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IEAQAAEAEDAQAAQAAAAgQAABDBBAoAAAACAAAgAABAA=</HashCode>
+      <FileName>ConfigFileManager.hpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

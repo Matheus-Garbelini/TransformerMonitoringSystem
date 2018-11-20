@@ -32,7 +32,8 @@ static uint32_t calibrate_one(rtc_cal_sel_t cal_clk, const char *name)
 
 // Sync control variable
 static volatile uint32_t _syncTime = 0;
-static uint32_t utcOffset = (-3 * 3600);
+//static uint32_t utcOffset = (-3 * 3600);
+static uint32_t utcOffset = 0; // Use UTC
 
 class GPSManager
 {

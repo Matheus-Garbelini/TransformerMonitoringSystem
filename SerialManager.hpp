@@ -79,7 +79,7 @@ public:
 				}
 			}
 
-			if (available)
+			while (available)
 			{
 				serialTimeout = millis(); // refresh serial non-blocking time
 				c = SerialSelected.read();
@@ -94,9 +94,9 @@ public:
 				else
 				{                                                                   // Got some line
 					parsed = JSONManager.decode(serialBuffer, SerialSelected, rsPin); // Decode JSON string and do some action
-					// TODO: Handle responses
 					serialBuffer = "";
 				}
+				available = SerialSelected.available();
 			}
 		}
 		else if (available > 6) // If more than 6 bytes are received from IHM

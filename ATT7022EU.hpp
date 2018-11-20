@@ -121,6 +121,10 @@ public:
 		return (float)SPI_ATT_Read(r_IaRmsFundamental + phase) / 8192.0;
 	};
 
+	inline float readPOWERVA(uint8_t phase = 0) {
+		return (float)SPI_ATT_Read(r_Pa + phase) / 8192.0;
+	};
+
 	inline double readTHDVoltage(uint8_t phase = 0) {
 		double Uall = readRMSVoltage(phase);
 		double Ub = readRMSVoltageFundamental(phase);

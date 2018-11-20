@@ -62,25 +62,25 @@ private:
 		if (Measurements.GridMeasurements.valid)
 		{
 			char text[32];
-			sprintf(text, "%.1f", Measurements.GridMeasurements.rmsVoltage1);
+			sprintf(text, "%.1f", Measurements.GridMeasurements.V_L1);
 			HMIMeasurements.rmsVoltage1.setText(text);
-			sprintf(text, "%.1f", Measurements.GridMeasurements.rmsVoltage2);
+			sprintf(text, "%.1f", Measurements.GridMeasurements.V_L2);
 			HMIMeasurements.rmsVoltage2.setText(text);
-			sprintf(text, "%.1f", Measurements.GridMeasurements.rmsVoltage3);
+			sprintf(text, "%.1f", Measurements.GridMeasurements.V_L3);
 			HMIMeasurements.rmsVoltage3.setText(text);
 
-			sprintf(text, "%.1f", Measurements.GridMeasurements.rmsCurrent1);
+			sprintf(text, "%.1f", Measurements.GridMeasurements.I_L1);
 			HMIMeasurements.rmsCurrent1.setText(text);
-			sprintf(text, "%.1f", Measurements.GridMeasurements.rmsCurrent2);
+			sprintf(text, "%.1f", Measurements.GridMeasurements.I_L2);
 			HMIMeasurements.rmsCurrent2.setText(text);
-			sprintf(text, "%.1f", Measurements.GridMeasurements.rmsCurrent3);
+			sprintf(text, "%.1f", Measurements.GridMeasurements.I_L3);
 			HMIMeasurements.rmsCurrent3.setText(text);
 
-			sprintf(text, "%.1f", Measurements.GridMeasurements.realPower1);
+			sprintf(text, "%.1f", Measurements.GridMeasurements.W_L1);
 			HMIMeasurements.realPower1.setText(text);
-			sprintf(text, "%.1f", Measurements.GridMeasurements.realPower2);
+			sprintf(text, "%.1f", Measurements.GridMeasurements.W_L2);
 			HMIMeasurements.realPower2.setText(text);
-			sprintf(text, "%.1f", Measurements.GridMeasurements.realPower3);
+			sprintf(text, "%.1f", Measurements.GridMeasurements.W_L3);
 			HMIMeasurements.realPower3.setText(text);
 		}
 	}
