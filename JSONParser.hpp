@@ -59,12 +59,16 @@ public:
 			}
 			if (root.containsKey("loraprotocol"))
 			{
-				Serial.println("LoRa protocol enabled");
+				Serial.println("LoRa protocol");
 				bool value = root["loraprotocol"];
 				Lora.setProtocolEnabled(value);
 				LoRa.receive();
 			}
-
+			if (root.containsKey("dump"))
+			{
+				bool value = root["dump"];
+				Measurements.dump_serial = value;
+			}
 			if (root.containsKey("tx"))
 			{
 				Lora.tx = (float)root["tx"];

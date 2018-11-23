@@ -389,7 +389,7 @@ public:
 
 			QueryManager.update();
 
-			if (!connected)
+			/*if (!connected)
 			{
 				if (millis() - disconnectedTimeout > 5000)
 				{
@@ -407,7 +407,7 @@ public:
 				connected = 1;
 				Serial.print("Acquired device id: ");
 				Serial.println(Radio.device_id());
-			}
+			}*/
 		}
 		else if (receivedRawPacket == true) // Raw receive
 		{

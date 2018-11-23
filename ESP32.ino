@@ -24,8 +24,8 @@
 #include "SerialManager.hpp"
 
 // --------- Global Classes --------
-uint8_t radioId[4] = { 0, 0, 0, 1 };
-BoardRadioNode<ThroughLora> Radio(radioId, 255);
+uint8_t radioId = 2;
+BoardRadioNode<ThroughLora> Radio(radioId);
 QueryManagerClass QueryManager;
 GPSManager GPS;
 HMIManager HMI;

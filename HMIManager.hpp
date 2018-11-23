@@ -76,11 +76,11 @@ private:
 			sprintf(text, "%.1f", Measurements.GridMeasurements.I_L3);
 			HMIMeasurements.rmsCurrent3.setText(text);
 
-			sprintf(text, "%.1f", Measurements.GridMeasurements.W_L1);
+			sprintf(text, "%.1f", Measurements.GridMeasurements.VA_L1);
 			HMIMeasurements.realPower1.setText(text);
-			sprintf(text, "%.1f", Measurements.GridMeasurements.W_L2);
+			sprintf(text, "%.1f", Measurements.GridMeasurements.VA_L2);
 			HMIMeasurements.realPower2.setText(text);
-			sprintf(text, "%.1f", Measurements.GridMeasurements.W_L3);
+			sprintf(text, "%.1f", Measurements.GridMeasurements.VA_L3);
 			HMIMeasurements.realPower3.setText(text);
 		}
 	}
@@ -138,7 +138,8 @@ public:
 			if (millis() - time > 1000)
 			{
 				time = millis();
-
+				StatusGPS.setPic(14);
+				StatusNetwork.setPic(14);
 				updateClock();
 				updateMeasurements();
 				// Linux Status

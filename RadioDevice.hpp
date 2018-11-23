@@ -3,38 +3,33 @@
 
 #define PJON_INCLUDE_TL
 #include <PJON.h>
-#include <PJONSlave.h>
 
 template <typename Strategy>
-class BoardRadioNode : public PJONSlave<Strategy>
+class BoardRadioNode : public PJON<Strategy>
 {
 private:
 	bool _radioEnabled = false;
 
 public:
-	BoardRadioNode(uint8_t PjonId = PJON_NOT_ASSIGNED) : PJONSlave<Strategy>(PjonId)
-	{
-	}
-
-	BoardRadioNode(uint8_t radioId[], uint8_t PjonId = PJON_NOT_ASSIGNED) : PJONSlave<Strategy>(radioId, PjonId)
+	BoardRadioNode(uint8_t PjonId = PJON_NOT_ASSIGNED) : PJON<Strategy>(PjonId)
 	{
 	}
 
 	inline void setSPI(SPIClass *spi) {
-		PJONSlave<Strategy>::strategy.setSPI(spi);
+		PJON<Strategy>::strategy.setSPI(spi);
 	}
 
 	inline bool begin()
 	{
-		PJONSlave<Strategy>::strategy.setPins(23, 25, 34);
-		bool init = PJONSlave<Strategy>::strategy.setFrequency(433E6);
+		PJON<Strategy>::strategy.setPins(23, 25, 34);
+		bool init = PJON<Strategy>::strategy.setFrequency(433E6);
 
 		if (init)
 		{
-			PJONSlave<Strategy>::strategy.setSignalBandwidth(250E3);
-			PJONSlave<Strategy>::strategy.setSpreadingFactor(7);
+			PJON<Strategy>::strategy.setSignalBandwidth(250E3);
+			PJON<Strategy>::strategy.setSpreadingFactor(7);
 			//PJONSlave<Strategy>::begin();
-			Serial.println(PJONSlave<Strategy>::device_id());
+			Serial.println(PJON<Strategy>::device_id());
 			//PJONSlave<Strategy>::set_error(error_handler);
 		}
 

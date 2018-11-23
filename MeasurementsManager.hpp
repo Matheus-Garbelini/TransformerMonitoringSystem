@@ -9,7 +9,7 @@
 #include "LinuxDevice.hpp"
 #include "ATT7022EU.hpp"
 
-#define WAIT_FOR_GPS 1
+#define WAIT_FOR_GPS 0
 #define MINUTE_SECONDS (60*1000) // 60 Seconds in milliseconds
 
 // JSON Fields
@@ -35,6 +35,8 @@ struct MEASUREMENTS
 	float I_L2 = 0;
 	float I_L3 = 0;
 
+	float A_N;
+
 	float THD_V_L1N = 0.0;
 	float THD_V_L2N = 0.0;
 	float THD_V_L3N = 0.0;
@@ -42,10 +44,22 @@ struct MEASUREMENTS
 	float THD_I_L2N = 0.0;
 	float THD_I_L3N = 0.0;
 
+	float VA_L1;
+	float VA_L2;
+	float VA_L3;
+
 	// TODO: Read real,active and reactive power
 	float W_L1 = 100;
 	float W_L2 = 100;
 	float W_L3 = 100;
+
+	float VAR_L1;
+	float VAR_L2;
+	float VAR_L3;
+
+	float PF_L1;
+	float PF_L2;
+	float PF_L3;
 };
 
 VISITABLE_STRUCT(MEASUREMENTS,
@@ -56,15 +70,26 @@ VISITABLE_STRUCT(MEASUREMENTS,
 	I_L1,
 	I_L2,
 	I_L3,
+	A_N,
 	THD_V_L1N,
 	THD_V_L2N,
 	THD_V_L3N,
 	THD_I_L1N,
 	THD_I_L2N,
-	THD_I_L3N);
-//realPower1,
-//realPower2,
-//realPower3);
+	THD_I_L3N,
+	VA_L1,
+	VA_L2,
+	VA_L3,
+	W_L1,
+	W_L2,
+	W_L3,
+	VAR_L1,
+	VAR_L2,
+	VAR_L3,
+	PF_L1,
+	PF_L2,
+	PF_L3
+);
 
 struct VARIABLE_STRUCTURE {
 	uint32_t timeout;
@@ -108,6 +133,8 @@ private:
 		GridMeasurements.I_L2 = EnergyIC.readRMSCurrent(1);
 		GridMeasurements.I_L3 = EnergyIC.readRMSCurrent(2);
 
+		GridMeasurements.A_N = EnergyIC.readRMSNeutral();
+
 		GridMeasurements.THD_V_L1N = EnergyIC.readTHDVoltage(0);
 		GridMeasurements.THD_V_L2N = EnergyIC.readTHDVoltage(1);
 		GridMeasurements.THD_V_L3N = EnergyIC.readTHDVoltage(2);
@@ -115,6 +142,22 @@ private:
 		GridMeasurements.THD_I_L1N = EnergyIC.readTHDCurrent(0);
 		GridMeasurements.THD_I_L2N = EnergyIC.readTHDCurrent(1);
 		GridMeasurements.THD_I_L3N = EnergyIC.readTHDCurrent(2);
+
+		GridMeasurements.VA_L1 = EnergyIC.readPowerVA(0);
+		GridMeasurements.VA_L2 = EnergyIC.readPowerVA(1);
+		GridMeasurements.VA_L3 = EnergyIC.readPowerVA(2);
+
+		GridMeasurements.W_L1 = EnergyIC.readPowerReal(0);
+		GridMeasurements.W_L2 = EnergyIC.readPowerReal(1);
+		GridMeasurements.W_L3 = EnergyIC.readPowerReal(2);
+
+		GridMeasurements.VAR_L1 = EnergyIC.readPowerVAR(0);
+		GridMeasurements.VAR_L2 = EnergyIC.readPowerVAR(1);
+		GridMeasurements.VAR_L3 = EnergyIC.readPowerVAR(2);
+
+		GridMeasurements.PF_L1 = EnergyIC.readPowerFactor(0);
+		GridMeasurements.PF_L2 = EnergyIC.readPowerFactor(1);
+		GridMeasurements.PF_L3 = EnergyIC.readPowerFactor(2);
 
 		updateIntegralData(IntegralData);
 	}
@@ -183,6 +226,7 @@ private:
 	static void sendIntegralData(const char * name, VARIABLE_STRUCTURE &variable, uint32_t updateTime) {
 		DynamicJsonBuffer jsonBuffer;
 		JsonObject &root = jsonBuffer.createObject();
+		char text[128];
 		root[JSON_CMD] = JSON_CMD_INTEGRAL;
 		root["name"] = name;
 		root["average"] = variable.average;
@@ -196,6 +240,13 @@ private:
 			root.printTo(Linux);
 			Linux.print("\n");
 		}
+
+		uint32_t size = root.printTo(text);
+		LoRa.beginPacket();
+		LoRa.write((uint8_t *)text, size);
+		LoRa.write('\n');
+		LoRa.endPacket();
+		LoRa.receive();
 
 		jsonBuffer.clear();
 	}
@@ -218,6 +269,12 @@ private:
 			root["time"] = GridMeasurements.time;
 			root.printTo(Linux);
 			Linux.print("\n");
+
+			if (dump_serial) {
+				root.prettyPrintTo(Serial);
+				Serial.print("\n");
+			}
+
 			jsonBuffer.clear();
 		}
 	}
@@ -229,6 +286,7 @@ public:
 	bool RTOS_ENABLE = true;
 	uint16_t RTOS_updateTime = 50;
 	uint16_t RTOS_priority = 23; // Max priority
+	bool dump_serial = false;
 
 	bool init()
 	{

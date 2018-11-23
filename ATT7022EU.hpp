@@ -68,10 +68,10 @@ class ATT7022EU
 #define r_Eqt2 0x38
 #define Meter_G                1.1338582677165354330708661417323
 
-#define Vu  0.190
-#define Vi  0.003
-#define Un  220
-#define In  4.15
+#define Vu  0.1
+#define Vi  0.04
+#define Un  127
+#define In  1.15
 #define Meter_Ec 3200
 #define Meter_HFConst        ((2.592*pow(10,10)*Meter_G*Meter_G*Vu*Vi)/(In*Un*Meter_Ec))
 #define Meter_K                        (2.592*pow(10,10)/(Meter_HFConst*Meter_Ec*pow(2,23)))
@@ -117,12 +117,76 @@ public:
 		return (float)SPI_ATT_Read(r_IaRms + phase) / 8192.0;
 	};
 
+	inline float readRMSNeutral() {
+		return (float)SPI_ATT_Read(0x29) / 8192.0;
+	};
+
 	inline float readRMSCurrentFundamental(uint8_t phase = 0) {
 		return (float)SPI_ATT_Read(r_IaRmsFundamental + phase) / 8192.0;
 	};
 
-	inline float readPOWERVA(uint8_t phase = 0) {
-		return (float)SPI_ATT_Read(r_Pa + phase) / 8192.0;
+	inline float readPowerVA(uint8_t phase = 0) {
+		uint32_t P = SPI_ATT_Read(r_Sa + phase);
+
+		float Pr = 0;
+
+		if (P > 0x800000) {
+			Pr = (0x1000000 - P);
+			Pr = (-Pr / 8.0);
+		}
+		else {
+			Pr = (float)P / 8.0;
+		}
+
+		return Pr;
+	};
+
+	inline float readPowerReal(uint8_t phase = 0) {
+		uint32_t P = SPI_ATT_Read(r_Pa + phase);
+
+		float Pr = 0;
+
+		if (P > 0x800000) {
+			Pr = (0x1000000 - P);
+			Pr = (-Pr / 8.0);
+		}
+		else {
+			Pr = (float)P / 8.0;
+		}
+
+		return Pr;
+	};
+
+	inline float readPowerVAR(uint8_t phase = 0) {
+		uint32_t P = SPI_ATT_Read(r_Qa + phase);
+
+		float Pr = 0;
+
+		if (P > 0x800000) {
+			Pr = (0x1000000 - P);
+			Pr = (-Pr / 8.0);
+		}
+		else {
+			Pr = (float)P / 8.0;
+		}
+
+		return Pr;
+	};
+
+	inline float readPowerFactor(uint8_t phase = 0) {
+		uint32_t P = SPI_ATT_Read(r_Pfa + phase);
+
+		float Pr = 0;
+
+		if (P > 0x800000) {
+			Pr = (0x1000000 - P);
+			Pr = (-Pr / 8388608.0);
+		}
+		else {
+			Pr = (float)P / 8388608.0;
+		}
+
+		return Pr;
 	};
 
 	inline double readTHDVoltage(uint8_t phase = 0) {
@@ -223,6 +287,9 @@ private:
 		SPI_ATT_Write(0x17, 0xF0AA);
 		SPI_ATT_Write(0x18, 0xF0AA);
 		SPI_ATT_Write(0x19, 0xF0AA);
+
+		// Constants
+		SPI_ATT_Write(0x1E, 0x0005E7);
 
 		SPI_ATT_Write(0xC9, 0x000001);
 
